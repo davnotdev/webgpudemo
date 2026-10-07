@@ -168,15 +168,14 @@ jobs:
 
       - if: steps.cache.outputs.cache-hit != 'true'
         env:
-          PLATFORM: ${{ matrix.platform }}
-          BUILDTYPE: ${{ matrix.buildtype }}
           CMAKE_C_COMPILER_LAUNCHER: ${{ matrix.dep == 'dawn' && 'sccache' || '' }}
           CMAKE_CXX_COMPILER_LAUNCHER: ${{ matrix.dep == 'dawn' && 'sccache' || '' }}
         run: |
           mkdir -p "stage/thirdparty/${{ matrix.out }}"
           stage=$(realpath stage)
           cd src
-          GODOT_SOURCE="$stage" bash "../ci/scripts/build-${{ matrix.dep }}.sh"
+          PLATFORM="${{ matrix.platform }}" BUILDTYPE="${{ matrix.buildtype }}" GODOT_SOURCE="$stage" \
+            bash "../ci/scripts/build-${{ matrix.dep }}.sh"
 
       - uses: actions/upload-artifact@v4
         with:

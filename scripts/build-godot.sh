@@ -9,7 +9,9 @@ set -e
 case $PLATFORM in
     windows)
         export WEB_BUILD=0
-        export SCONS_PLATFORM_FLAGS="platform=windows use_mingw=yes d3d12=no opengl3=no"
+        export SCONS_PLATFORM_FLAGS="platform=windows d3d12=no opengl3=no"
+        # mingw
+        # export SCONS_PLATFORM_FLAGS="platform=windows use_mingw=yes d3d12=no opengl3=no"
         ;;
     linuxbsd)
         export WEB_BUILD=0
@@ -70,8 +72,7 @@ esac
 #   - `linker=mold`, but note the license.
 #   - `builtin_*=no` to potentially save on compile time.
 
-scons --max-drift=1 --experimental=ninja \
-    ninja=yes \
+scons --max-drift=1 \
     optimize=$SCONS_OPTIMIZE \
     debug_symbols=yes \
     compiledb=yes \

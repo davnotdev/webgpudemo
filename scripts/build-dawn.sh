@@ -8,8 +8,12 @@ set -e
 
 case $PLATFORM in
     windows)
+        export CMAKE_PLATFORM_FLAGS="-DCMAKE_MSVC_RUNTIME_LIBRARY=MultiThreaded"
+        # mingw
+        # export CMAKE_PLATFORM_FLAGS="-DCMAKE_TOOLCHAIN_FILE=$(dirname "$(realpath "$0")")/mingw-w64-x86_64.cmake"
         ;;
     linuxbsd)
+        export CMAKE_PLATFORM_FLAGS=""
         ;;
     *)
         echo "Error: unsupported platform: $PLATFORM"
@@ -35,9 +39,14 @@ if [ ! -d "$GODOT_SOURCE" ]; then
     exit 1
 fi
 
-cmake -S . -B out/$BUILDTYPE/Vendor -G Ninja \
+cmake -S . -B out/$PLATFORM/$BUILDTYPE/Vendor -G Ninja \
     -DCMAKE_BUILD_TYPE=$CMAKE_BUILD_TYPE \
-    -DDAWN_ENABLE_INSTALL=ON
-cmake --build out/$BUILDTYPE/Vendor
-cmake --install out/$BUILDTYPE/Vendor --prefix "$GODOT_SOURCE/thirdparty/dawn/"
+    -DDAWN_ENABLE_INSTALL=ON \
+    -DDAWN_FETCH_DEPENDENCIES=ON \
+    -DDAWN_BUILD_SAMPLES=OFF \
+    -DDAWN_BUILD_TESTS=OFF \
+    -DTINT_BUILD_TESTS=OFF \
+    $CMAKE_PLATFORM_FLAGS
+cmake --build out/$PLATFORM/$BUILDTYPE/Vendor
+cmake --install out/$PLATFORM/$BUILDTYPE/Vendor --prefix "$GODOT_SOURCE/thirdparty/dawn/"
 

@@ -8,20 +8,28 @@ set -e
 
 case $PLATFORM in
     windows)
-        export TARGET_TRIPLE=x86_64-pc-windows-gnu
-        export BUILD_DIR=target/x86_64-pc-windows-gnu/
+        export TARGET_TRIPLE=x86_64-pc-windows-msvc
+        export BUILD_DIR=target/x86_64-pc-windows-msvc/
+        export RUSTFLAGS="$RUSTFLAGS -C target-feature=+crt-static"
+        export LIB_FILE=naga_native.lib
+        # mingw
+        # export TARGET_TRIPLE=x86_64-pc-windows-gnu
+        # export BUILD_DIR=target/x86_64-pc-windows-gnu/
+        # export LIB_FILE=libnaga_native.a
         export CARGO_WEB_BUILD_FLAGS=""
         export CARGO_TOOLCHAIN=""
         ;;
     linuxbsd)
         export TARGET_TRIPLE=x86_64-unknown-linux-gnu
         export BUILD_DIR=target/x86_64-unknown-linux-gnu/
+        export LIB_FILE=libnaga_native.a
         export CARGO_WEB_BUILD_FLAGS=""
         export CARGO_TOOLCHAIN=""
         ;;
     web)
         export TARGET_TRIPLE=wasm32-unknown-emscripten
         export BUILD_DIR=target/wasm32-unknown-emscripten
+        export LIB_FILE=libnaga_native.a
         export RUSTFLAGS="$RUSTFLAGS -C panic=abort"
         export CARGO_WEB_BUILD_FLAGS="-Zbuild-std=panic_abort,core,alloc,std"
         export CARGO_TOOLCHAIN="+nightly"
@@ -51,4 +59,4 @@ if [ ! -d "$GODOT_SOURCE" ]; then
 fi
 
 cargo $CARGO_TOOLCHAIN b --target $TARGET_TRIPLE $CARGO_BUILD_FLAGS $CARGO_WEB_BUILD_FLAGS
-cp "$BUILD_DIR/$BUILDTYPE/libnaga_native.a" "$GODOT_SOURCE/thirdparty/naga-native/"
+cp "$BUILD_DIR/$BUILDTYPE/$LIB_FILE" "$GODOT_SOURCE/thirdparty/naga-native/"

@@ -39,5 +39,7 @@ if [ ! -d "$GODOT_SOURCE" ]; then
     exit 1
 fi
 
+cd ffi/
 cargo b --target $TARGET_TRIPLE $CARGO_BUILD_FLAGS
-cp "$BUILD_DIR/$BUILDTYPE/libwgpu_native.a" "$GODOT_SOURCE/thirdparty/wgpu/"
+cd ..
+cp "$BUILD_DIR/$BUILDTYPE/libspirv_webgpu_transform_ffi.a" "$GODOT_SOURCE/thirdparty/spirv-webgpu-transform/"

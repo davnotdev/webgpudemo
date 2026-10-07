@@ -8,7 +8,7 @@ set -e
 
 case $PLATFORM in
     windows)
-        export CMAKE_PLATFORM_FLAGS="-DCMAKE_MSVC_RUNTIME_LIBRARY=MultiThreaded"
+        export CMAKE_PLATFORM_FLAGS="-DCMAKE_MSVC_RUNTIME_LIBRARY=MultiThreaded -DABSL_MSVC_STATIC_RUNTIME=ON -DCMAKE_POLICY_DEFAULT_CMP0141=NEW -DCMAKE_MSVC_DEBUG_INFORMATION_FORMAT=Embedded"
         # mingw
         # export CMAKE_PLATFORM_FLAGS="-DCMAKE_TOOLCHAIN_FILE=$(dirname "$(realpath "$0")")/mingw-w64-x86_64.cmake"
         ;;
@@ -33,6 +33,11 @@ case $BUILDTYPE in
         exit 1
         ;;
 esac
+
+if [ "$PLATFORM" = windows ] && [ "$BUILDTYPE" = debug ]; then
+    export CMAKE_BUILD_TYPE=RelWithDebInfo
+    export CMAKE_PLATFORM_FLAGS="$CMAKE_PLATFORM_FLAGS -DDAWN_ALWAYS_ASSERT=ON"
+fi
 
 if [ ! -d "$GODOT_SOURCE" ]; then
     echo "Error: bad source dir: $GODOT_SOURCE"

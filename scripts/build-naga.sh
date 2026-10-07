@@ -3,17 +3,28 @@
 set -e
 
 # GODOT_SOURCE=
-# PLATFORM=<linuxbsd|windows>
+# PLATFORM=<linuxbsd|windows|web>
 # BUILDTYPE=<debug|release>
 
 case $PLATFORM in
     windows)
         export TARGET_TRIPLE=x86_64-pc-windows-gnu
         export BUILD_DIR=target/x86_64-pc-windows-gnu/
+        export CARGO_WEB_BUILD_FLAGS=""
+        export CARGO_TOOLCHAIN=""
         ;;
     linuxbsd)
         export TARGET_TRIPLE=x86_64-unknown-linux-gnu
         export BUILD_DIR=target/x86_64-unknown-linux-gnu/
+        export CARGO_WEB_BUILD_FLAGS=""
+        export CARGO_TOOLCHAIN=""
+        ;;
+    web)
+        export TARGET_TRIPLE=wasm32-unknown-emscripten
+        export BUILD_DIR=target/wasm32-unknown-emscripten
+        export RUSTFLAGS="$RUSTFLAGS -C panic=abort"
+        export CARGO_WEB_BUILD_FLAGS="-Zbuild-std=panic_abort,core,alloc,std"
+        export CARGO_TOOLCHAIN="+nightly"
         ;;
     *)
         echo "Error: unsupported platform: $PLATFORM"
@@ -39,5 +50,5 @@ if [ ! -d "$GODOT_SOURCE" ]; then
     exit 1
 fi
 
-cargo b --target $TARGET_TRIPLE $CARGO_BUILD_FLAGS
+cargo $CARGO_TOOLCHAIN b --target $TARGET_TRIPLE $CARGO_BUILD_FLAGS $CARGO_WEB_BUILD_FLAGS
 cp "$BUILD_DIR/$BUILDTYPE/libnaga_native.a" "$GODOT_SOURCE/thirdparty/naga-native/"

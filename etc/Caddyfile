@@ -1,0 +1,8 @@
+# Template Caddyfile for hosting.
+# This is for me specifically as you can see.
+
+webgpudemo.davnot.dev {
+        root * /app/webgpudemo/uploads/
+        file_server browse
+}
+

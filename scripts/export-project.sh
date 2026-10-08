@@ -42,7 +42,9 @@ OUTPUT_DIR=$(realpath "$OUTPUT_DIR")
 "$GODOT_EDITOR" --headless --path "$PROJECT_DIR" --import
 "$GODOT_EDITOR" --headless --path "$PROJECT_DIR" $GODOT_EXPORT_FLAG "WebGPU" "$OUTPUT_DIR/index.html"
 
-if [ ! -f "$OUTPUT_DIR/index.html" ]; then
-    echo "Error: export produced no output: $PROJECT_DIR"
-    exit 1
-fi
+for file in index.html index.js index.wasm index.pck; do
+    if [ ! -s "$OUTPUT_DIR/$file" ]; then
+        echo "Error: export is missing $file: $PROJECT_DIR"
+        exit 1
+    fi
+done

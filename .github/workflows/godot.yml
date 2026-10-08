@@ -94,5 +94,12 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: godot-${{ inputs.platform }}-${{ matrix.buildtype }}-${{ matrix.backend }}
-          path: godot/bin
+          path: godot/bin/${{ inputs.platform == 'windows' && '*.exe' || inputs.platform == 'web' && '*.zip' || 'godot.linuxbsd.*' }}
           if-no-files-found: error
+
+      - if: inputs.platform == 'windows'
+        uses: actions/upload-artifact@v4
+        with:
+          name: godot-${{ inputs.platform }}-${{ matrix.buildtype }}-${{ matrix.backend }}-pdb
+          path: godot/bin/*.pdb
+          if-no-files-found: warn

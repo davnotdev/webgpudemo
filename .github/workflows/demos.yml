@@ -53,15 +53,24 @@ jobs:
             git init -q "repos/$demo"
             git -C "repos/$demo" fetch -q --depth 1 --filter=blob:none "$url" "$commit"
             mapfile -t roots < <(yq -r '.roots[]' "$file")
+            : > matched
 
             git -C "repos/$demo" ls-tree -r --name-only FETCH_HEAD | grep -E '(^|/)project\.godot$' | while read -r path; do
               dir=$(dirname "$path")
               for root in "${roots[@]}"; do
                 if [[ $dir == $root && ${dir//[^\/]/} == "${root//[^\/]/}" ]]; then
                   printf '%s\t%s\t%s\t%s\n' "$demo" "$url" "$commit" "$dir" >> projects.tsv
+                  echo "$root" >> matched
                   break
                 fi
               done
+            done
+
+            for root in "${roots[@]}"; do
+              if ! grep -Fxq -- "$root" matched; then
+                echo "Error: $demo root matches no projects: $root"
+                exit 1
+              fi
             done
           done
 

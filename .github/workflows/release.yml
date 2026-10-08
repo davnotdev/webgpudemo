@@ -23,21 +23,43 @@ jobs:
           pattern: godot-*
           path: dist
 
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: demos-*
+          path: demos
+
       - env:
           GH_TOKEN: ${{ github.token }}
           COMMITS: ${{ inputs.commits }}
         run: |
-          cd dist
-          for dir in */; do
-            (cd "$dir" && zip -qr "../${dir%/}.zip" .)
+          mkdir assets
+          for dir in dist/*/; do
+            name=$(basename "$dir")
+            if [[ $name == godot-web-* ]]; then
+              cp "$dir"*.zip assets/
+            else
+              (cd "$dir" && zip -qr "../../assets/$name.zip" .)
+            fi
+          done
+
+          for dir in demos/*/; do
+            [ -d "$dir" ] || continue
+            buildtype=$(basename "$dir" | cut -d- -f2)
+            mkdir -p "demos-merged/$buildtype"
+            cp -r "$dir". "demos-merged/$buildtype/"
+          done
+          for dir in demos-merged/*/*/; do
+            [ -d "$dir" ] || continue
+            buildtype=$(basename "$(dirname "$dir")")
+            demo=$(basename "$dir")
+            (cd "$dir" && zip -qr "$GITHUB_WORKSPACE/assets/$demo-$buildtype.zip" .)
           done
 
           godot=$(jq -r '.godot' <<< "$COMMITS")
-          tag="godot-${godot:0:10}-${{ github.run_number }}"
-          notes=$(jq -r 'to_entries[] | "\(.key): \(.value)"' <<< "$COMMITS")
+          tag="godot-webgpu-${godot:0:10}-${{ github.run_number }}"
 
-          gh release create "$tag" *.zip \
+          gh release create "$tag" assets/* \
             --repo "$GITHUB_REPOSITORY" \
             --target "$GITHUB_SHA" \
             --title "$tag" \
-            --notes "$notes"
+            --notes ""

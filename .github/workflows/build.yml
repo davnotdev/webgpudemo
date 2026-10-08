@@ -7,16 +7,11 @@ on:
       - source/**
       - scripts/**
       - .github/workflows/**
-  pull_request:
-    paths:
-      - source/**
-      - scripts/**
-      - .github/workflows/**
   workflow_dispatch:
 
 concurrency:
   group: build-${{ github.ref }}
-  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+  cancel-in-progress: false
 
 permissions:
   contents: read
@@ -87,8 +82,13 @@ jobs:
       commits: ${{ needs.resolve.outputs.commits }}
 
   release:
-    needs: [resolve, godot-linuxbsd, godot-windows, godot-web]
-    if: github.event_name != 'pull_request'
+    needs: [resolve, godot-linuxbsd, godot-windows, godot-web, demos]
+    if: >-
+      !cancelled() && github.event_name != 'pull_request'
+      && needs.godot-linuxbsd.result == 'success'
+      && needs.godot-windows.result == 'success'
+      && needs.godot-web.result == 'success'
+      && needs.demos.result == 'success'
     uses: ./.github/workflows/release.yml
     permissions:
       contents: write

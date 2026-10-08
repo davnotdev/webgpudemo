@@ -32,7 +32,7 @@ case $PLATFORM in
         export LIB_FILE=libnaga_native.a
         export RUSTFLAGS="$RUSTFLAGS -C panic=abort"
         export CARGO_WEB_BUILD_FLAGS="-Zbuild-std=panic_abort,core,alloc,std"
-        export CARGO_TOOLCHAIN="+nightly"
+        export CARGO_TOOLCHAIN="+${RUST_NIGHTLY:-nightly}"
         ;;
     *)
         echo "Error: unsupported platform: $PLATFORM"

@@ -78,5 +78,6 @@ scons --max-drift=1 \
     compiledb=yes \
     webgpu=yes \
     $SCONS_BACKEND_FLAG \
-    $SCONS_PLATFORM_FLAGS
+    $SCONS_PLATFORM_FLAGS \
+    "$@"
 

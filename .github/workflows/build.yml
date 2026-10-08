@@ -23,6 +23,8 @@ permissions:
 
 env:
   EMSDK_VERSION: latest
+  RUSTUP_TOOLCHAIN: "1.91"
+  RUST_NIGHTLY: nightly-2026-10-01
 
 defaults:
   run:
@@ -114,7 +116,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: stage
-          key: dep-${{ matrix.dep }}-${{ matrix.platform }}-${{ matrix.buildtype }}-${{ env.SHA }}-${{ hashFiles(format('ci/scripts/build-{0}.sh', matrix.dep)) }}
+          key: dep-${{ matrix.dep }}-${{ matrix.platform }}-${{ matrix.buildtype }}-${{ env.SHA }}-${{ hashFiles(format('ci/scripts/build-{0}.sh', matrix.dep)) }}-${{ matrix.dep != 'dawn' && format('{0}-{1}', env.RUSTUP_TOOLCHAIN, env.RUST_NIGHTLY) || 'cmake' }}
 
       - if: steps.cache.outputs.cache-hit != 'true' && matrix.dep != 'dawn'
         uses: actions/checkout@v4
@@ -153,12 +155,15 @@ jobs:
           key: dawn-${{ matrix.platform }}-${{ matrix.buildtype }}
 
       - if: steps.cache.outputs.cache-hit != 'true' && matrix.platform == 'web'
-        run: rustup toolchain install nightly --profile minimal --component rust-src
+        run: rustup toolchain install "$RUST_NIGHTLY" --profile minimal --component rust-src
 
       - if: steps.cache.outputs.cache-hit != 'true' && matrix.platform == 'web'
         uses: mymindstorm/setup-emsdk@v15
         with:
           version: ${{ env.EMSDK_VERSION }}
+
+      - if: steps.cache.outputs.cache-hit != 'true' && matrix.dep != 'dawn'
+        run: rustup toolchain install "$RUSTUP_TOOLCHAIN" --profile minimal
 
       - if: steps.cache.outputs.cache-hit != 'true' && matrix.dep != 'dawn'
         uses: Swatinem/rust-cache@v2
@@ -213,8 +218,6 @@ jobs:
             backend-dep: wgpu-native
           - backend: dawn-desktop
             backend-dep: dawn
-    env:
-      SCONS_CACHE: ${{ github.workspace }}/.scons-cache
     steps:
       - uses: actions/checkout@v4
         with:
@@ -272,7 +275,7 @@ jobs:
           BACKEND: ${{ matrix.backend }}
         run: |
           cd godot
-          bash ../ci/scripts/build-godot.sh
+          bash ../ci/scripts/build-godot.sh "cache_path=${{ github.workspace }}/.scons-cache"
 
       - uses: actions/upload-artifact@v4
         with:

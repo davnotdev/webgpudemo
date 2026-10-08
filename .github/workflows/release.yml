@@ -1,0 +1,43 @@
+name: Release
+
+on:
+  workflow_call:
+    inputs:
+      commits:
+        type: string
+        required: true
+
+permissions:
+  contents: write
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: godot-*
+          path: dist
+
+      - env:
+          GH_TOKEN: ${{ github.token }}
+          COMMITS: ${{ inputs.commits }}
+        run: |
+          cd dist
+          for dir in */; do
+            (cd "$dir" && zip -qr "../${dir%/}.zip" .)
+          done
+
+          godot=$(jq -r '.godot' <<< "$COMMITS")
+          tag="godot-${godot:0:10}-${{ github.run_number }}"
+          notes=$(jq -r 'to_entries[] | "\(.key): \(.value)"' <<< "$COMMITS")
+
+          gh release create "$tag" *.zip \
+            --repo "$GITHUB_REPOSITORY" \
+            --target "$GITHUB_SHA" \
+            --title "$tag" \
+            --notes "$notes"

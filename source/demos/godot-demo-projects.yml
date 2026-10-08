@@ -1,0 +1,8 @@
+url: https://github.com/godotengine/godot-demo-projects
+# The latest commit as of 10/07/2006
+commit: 3e08537616661a5883831628decab4c526260289
+roots:
+  - 2d/*
+  - 3d/*
+  - compute/*
+  - gui/*

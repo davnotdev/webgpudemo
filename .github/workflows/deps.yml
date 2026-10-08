@@ -1,0 +1,142 @@
+name: Dependencies
+
+on:
+  workflow_call:
+    inputs:
+      commits:
+        type: string
+        required: true
+      emsdk-version:
+        type: string
+        required: true
+      rust-toolchain:
+        type: string
+        required: true
+      rust-nightly:
+        type: string
+        required: true
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  deps:
+    name: ${{ matrix.dep }} (${{ matrix.platform }}, ${{ matrix.buildtype }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        dep: [naga, wgpu-native, spirv-webgpu-transform, dawn]
+        platform: [linuxbsd, windows, web]
+        buildtype: [debug, release]
+        exclude:
+          - dep: wgpu-native
+            platform: web
+          - dep: dawn
+            platform: web
+        include:
+          - dep: naga
+            repo: davnotdev/naga-native
+            out: naga-native
+          - dep: wgpu-native
+            repo: davnotdev/wgpu-native
+            out: wgpu
+          - dep: spirv-webgpu-transform
+            repo: davnotdev/spirv-webgpu-transform
+            out: spirv-webgpu-transform
+          - dep: dawn
+            out: dawn
+          - platform: linuxbsd
+            os: ubuntu-latest
+          - platform: windows
+            os: windows-latest
+          - platform: web
+            os: ubuntu-latest
+    env:
+      SHA: ${{ fromJSON(inputs.commits)[matrix.dep] }}
+      RUSTUP_TOOLCHAIN: ${{ inputs.rust-toolchain }}
+      RUST_NIGHTLY: ${{ inputs.rust-nightly }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: ci
+
+      - id: cache
+        uses: actions/cache@v4
+        with:
+          path: stage
+          key: dep-${{ matrix.dep }}-${{ matrix.platform }}-${{ matrix.buildtype }}-${{ env.SHA }}-${{ hashFiles(format('ci/scripts/build-{0}.sh', matrix.dep)) }}-${{ matrix.dep != 'dawn' && format('{0}-{1}', env.RUSTUP_TOOLCHAIN, env.RUST_NIGHTLY) || 'cmake' }}
+
+      - if: steps.cache.outputs.cache-hit != 'true' && matrix.dep != 'dawn'
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ matrix.repo }}
+          ref: ${{ env.SHA }}
+          path: src
+          submodules: recursive
+
+      - if: steps.cache.outputs.cache-hit != 'true' && matrix.dep == 'dawn'
+        run: |
+          git init src
+          git -C src fetch --depth 1 https://dawn.googlesource.com/dawn "$SHA"
+          git -C src checkout FETCH_HEAD
+
+      - if: steps.cache.outputs.cache-hit != 'true' && matrix.dep == 'dawn'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - if: steps.cache.outputs.cache-hit != 'true' && matrix.dep == 'dawn'
+        run: python -m pip install ninja
+
+      - if: steps.cache.outputs.cache-hit != 'true' && matrix.dep == 'dawn' && runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libxrandr-dev libxinerama-dev libxcursor-dev mesa-common-dev libx11-xcb-dev pkg-config
+
+      - if: steps.cache.outputs.cache-hit != 'true' && matrix.dep == 'dawn' && runner.os == 'Windows'
+        uses: ilammy/msvc-dev-cmd@v1
+
+      - if: steps.cache.outputs.cache-hit != 'true' && matrix.dep == 'dawn'
+        uses: hendrikmuhs/ccache-action@v1.2
+        with:
+          variant: sccache
+          key: dawn-${{ matrix.platform }}-${{ matrix.buildtype }}
+
+      - if: steps.cache.outputs.cache-hit != 'true' && matrix.platform == 'web'
+        run: rustup toolchain install "$RUST_NIGHTLY" --profile minimal --component rust-src
+
+      - if: steps.cache.outputs.cache-hit != 'true' && matrix.platform == 'web'
+        uses: mymindstorm/setup-emsdk@v15
+        with:
+          version: ${{ inputs.emsdk-version }}
+
+      - if: steps.cache.outputs.cache-hit != 'true' && matrix.dep != 'dawn'
+        run: rustup toolchain install "$RUSTUP_TOOLCHAIN" --profile minimal
+
+      - if: steps.cache.outputs.cache-hit != 'true' && matrix.dep != 'dawn'
+        uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: src
+          key: ${{ matrix.platform }}-${{ matrix.buildtype }}
+
+      - if: steps.cache.outputs.cache-hit != 'true'
+        env:
+          CMAKE_C_COMPILER_LAUNCHER: ${{ matrix.dep == 'dawn' && 'sccache' || '' }}
+          CMAKE_CXX_COMPILER_LAUNCHER: ${{ matrix.dep == 'dawn' && 'sccache' || '' }}
+        run: |
+          mkdir -p "stage/thirdparty/${{ matrix.out }}"
+          stage=$(realpath stage)
+          cd src
+          PLATFORM="${{ matrix.platform }}" BUILDTYPE="${{ matrix.buildtype }}" GODOT_SOURCE="$stage" \
+            bash "../ci/scripts/build-${{ matrix.dep }}.sh"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dep-${{ matrix.dep }}-${{ matrix.platform }}-${{ matrix.buildtype }}
+          path: stage
+          if-no-files-found: error

@@ -1,0 +1,173 @@
+name: Demos
+
+on:
+  workflow_call:
+    inputs:
+      commits:
+        type: string
+        required: true
+      editor-artifact:
+        type: string
+        default: godot-linuxbsd-release-wgpu-desktop
+      shard-size:
+        type: number
+        default: 6
+      timeout:
+        type: string
+        default: 30m
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      shards: ${{ steps.plan.outputs.shards }}
+      count: ${{ steps.plan.outputs.count }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: plan
+        env:
+          SHARD_SIZE: ${{ inputs.shard-size }}
+        run: |
+          : > projects.tsv
+          for file in source/demos/*.yml; do
+            demo=$(basename "$file" .yml)
+            url=$(yq -r '.url' "$file")
+            commit=$(yq -r '.commit // ""' "$file")
+            if [ -z "$commit" ]; then
+              commit=$(git ls-remote "$url" HEAD | cut -f1)
+            fi
+            if [ -z "$commit" ]; then
+              echo "Error: could not resolve $demo"
+              exit 1
+            fi
+            echo "$demo: $commit"
+
+            git init -q "repos/$demo"
+            git -C "repos/$demo" fetch -q --depth 1 --filter=blob:none "$url" "$commit"
+            mapfile -t roots < <(yq -r '.roots[]' "$file")
+
+            git -C "repos/$demo" ls-tree -r --name-only FETCH_HEAD | grep -E '(^|/)project\.godot$' | while read -r path; do
+              dir=$(dirname "$path")
+              for root in "${roots[@]}"; do
+                if [[ $dir == $root && ${dir//[^\/]/} == "${root//[^\/]/}" ]]; then
+                  printf '%s\t%s\t%s\t%s\n' "$demo" "$url" "$commit" "$dir" >> projects.tsv
+                  break
+                fi
+              done
+            done
+          done
+
+          shards=$(jq -R -s -c --argjson size "$SHARD_SIZE" '
+            split("\n") | map(select(length > 0) | split("\t") | {demo: .[0], url: .[1], commit: .[2], path: .[3]})
+            | sort_by(.demo, .path)
+            | . as $all
+            | [range(0; length; $size) | {id: (. / $size), projects: $all[.:. + $size]}]
+          ' projects.tsv)
+
+          echo "projects: $(wc -l < projects.tsv), shards: $(jq length <<< "$shards")"
+          echo "shards=$shards" >> "$GITHUB_OUTPUT"
+          echo "count=$(jq length <<< "$shards")" >> "$GITHUB_OUTPUT"
+
+  export:
+    name: export (${{ matrix.buildtype }}, shard ${{ matrix.shard.id }})
+    needs: plan
+    if: needs.plan.outputs.count != '0'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        buildtype: [debug, release]
+        shard: ${{ fromJSON(needs.plan.outputs.shards) }}
+    env:
+      PROJECTS: ${{ toJSON(matrix.shard.projects) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: ci
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: ${{ inputs.editor-artifact }}
+          path: editor
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: godot-web-${{ matrix.buildtype }}-emdawnwebgpu
+          path: template
+
+      - id: checkout
+        run: |
+          for demo in $(jq -r '[.[].demo] | unique[]' <<< "$PROJECTS"); do
+            url=$(jq -r --arg demo "$demo" 'map(select(.demo == $demo))[0].url' <<< "$PROJECTS")
+            commit=$(jq -r --arg demo "$demo" 'map(select(.demo == $demo))[0].commit' <<< "$PROJECTS")
+            git init -q "demos/$demo"
+            git -C "demos/$demo" fetch -q --depth 1 --filter=blob:none "$url" "$commit"
+            if ! jq -e --arg demo "$demo" 'any(.[]; .demo == $demo and .path == ".")' <<< "$PROJECTS" > /dev/null; then
+              jq -r --arg demo "$demo" '.[] | select(.demo == $demo) | .path' <<< "$PROJECTS" |
+                git -C "demos/$demo" sparse-checkout set --stdin
+            fi
+            git -C "demos/$demo" checkout -q FETCH_HEAD
+          done
+
+          {
+            echo "imports<<EOF"
+            jq -r '.[] | "demos/\(.demo)/\(.path)/.godot"' <<< "$PROJECTS"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - uses: actions/cache@v4
+        with:
+          path: ${{ steps.checkout.outputs.imports }}
+          key: demo-imports-${{ fromJSON(inputs.commits).godot }}-${{ hashFiles('ci/source/demos/*.yml') }}-${{ inputs.shard-size }}-${{ matrix.shard.id }}
+
+      - run: |
+          editor=$(find editor -type f -name 'godot.linuxbsd.editor*' ! -name '*.debug' | head -n 1)
+          template=$(find template -type f -name "godot.web.template_${{ matrix.buildtype }}*.zip" | head -n 1)
+          if [ -z "$editor" ] || [ -z "$template" ]; then
+            echo "Error: missing editor ($editor) or template ($template)"
+            exit 1
+          fi
+          chmod +x "$editor"
+
+          mapfile -t dirs < <(jq -r '.[] | "\(.demo)/\(.path)"' <<< "$PROJECTS")
+          cd demos
+          BUILDTYPE="${{ matrix.buildtype }}" TEMPLATE="../$template" GODOT_EDITOR="../$editor" \
+            OUTPUT_DIR=../out LOG_DIR=../logs TIMEOUT="${{ inputs.timeout }}" \
+            bash ../ci/scripts/export-demos.sh "${dirs[@]}"
+
+      - if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: demos-${{ matrix.buildtype }}-${{ matrix.shard.id }}
+          path: out
+          if-no-files-found: ignore
+
+      - if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: demo-logs-${{ matrix.buildtype }}-${{ matrix.shard.id }}
+          path: logs
+          if-no-files-found: ignore
+
+  collect:
+    needs: export
+    if: ${{ !cancelled() && needs.export.result != 'skipped' }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        buildtype: [debug, release]
+    steps:
+      - uses: actions/upload-artifact/merge@v4
+        with:
+          name: demos-${{ matrix.buildtype }}
+          pattern: demos-${{ matrix.buildtype }}-*
+          delete-merged: true

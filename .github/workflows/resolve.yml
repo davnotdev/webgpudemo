@@ -1,0 +1,54 @@
+name: Resolve
+
+on:
+  workflow_call:
+    outputs:
+      commits:
+        value: ${{ jobs.resolve.outputs.commits }}
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  resolve:
+    runs-on: ubuntu-latest
+    outputs:
+      commits: ${{ steps.resolve.outputs.commits }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: resolve
+        run: |
+          if [ ! -f source/GODOT_COMMIT ]; then
+            echo "Error: missing source/GODOT_COMMIT"
+            exit 1
+          fi
+          godot=$(tr -d '[:space:]' < source/GODOT_COMMIT)
+          echo "godot: $godot"
+          commits=$(jq -nc --arg sha "$godot" '{godot: $sha}')
+
+          resolve() {
+            local sha
+            sha=$(curl -sfL "https://raw.githubusercontent.com/davnotdev/godot/$godot/thirdparty/$4/TAG" | tr -d '[:space:]') || true
+            if [ -z "$sha" ]; then
+              echo "Warning: no thirdparty/$4/TAG, using $3 of $2"
+              sha=$(git ls-remote "$2" "$3" | cut -f1)
+            fi
+            if [ -z "$sha" ]; then
+              echo "Error: could not resolve $1"
+              exit 1
+            fi
+            echo "$1: $sha"
+            commits=$(jq -c --arg name "$1" --arg sha "$sha" '.[$name] = $sha' <<< "$commits")
+          }
+
+          resolve naga https://github.com/davnotdev/naga-native refs/heads/naga-patches-wgpu-29 naga-native
+          resolve wgpu-native https://github.com/davnotdev/wgpu-native refs/heads/godot-webgpu wgpu
+          resolve spirv-webgpu-transform https://github.com/davnotdev/spirv-webgpu-transform HEAD spirv-webgpu-transform
+          resolve dawn https://dawn.googlesource.com/dawn refs/heads/main dawn
+
+          echo "commits=$commits" >> "$GITHUB_OUTPUT"

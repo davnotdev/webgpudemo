@@ -6,12 +6,12 @@ on:
     paths:
       - source/**
       - scripts/**
-      - .github/workflows/build.yml
+      - .github/workflows/**
   pull_request:
     paths:
       - source/**
       - scripts/**
-      - .github/workflows/build.yml
+      - .github/workflows/**
   workflow_dispatch:
 
 concurrency:
@@ -21,303 +21,38 @@ concurrency:
 permissions:
   contents: read
 
-env:
-  EMSDK_VERSION: latest
-  RUSTUP_TOOLCHAIN: "1.91"
-  RUST_NIGHTLY: nightly-2026-10-01
-
-defaults:
-  run:
-    shell: bash
-
 jobs:
   resolve:
-    runs-on: ubuntu-latest
-    outputs:
-      godot: ${{ steps.resolve.outputs.godot }}
-      naga: ${{ steps.resolve.outputs.naga }}
-      wgpu-native: ${{ steps.resolve.outputs.wgpu-native }}
-      spirv-webgpu-transform: ${{ steps.resolve.outputs.spirv-webgpu-transform }}
-      dawn: ${{ steps.resolve.outputs.dawn }}
-    steps:
-      - uses: actions/checkout@v4
-
-      - id: resolve
-        run: |
-          if [ ! -f source/GODOT_COMMIT ]; then
-            echo "Error: missing source/GODOT_COMMIT"
-            exit 1
-          fi
-          godot=$(tr -d '[:space:]' < source/GODOT_COMMIT)
-          echo "godot: $godot"
-          echo "godot=$godot" >> "$GITHUB_OUTPUT"
-
-          resolve() {
-            local sha
-            sha=$(curl -sfL "https://raw.githubusercontent.com/davnotdev/godot/$godot/thirdparty/$4/TAG" | tr -d '[:space:]') || true
-            if [ -z "$sha" ]; then
-              echo "Warning: no thirdparty/$4/TAG, using $3 of $2"
-              sha=$(git ls-remote "$2" "$3" | cut -f1)
-            fi
-            if [ -z "$sha" ]; then
-              echo "Error: could not resolve $1"
-              exit 1
-            fi
-            echo "$1: $sha"
-            echo "$1=$sha" >> "$GITHUB_OUTPUT"
-          }
-
-          resolve naga https://github.com/davnotdev/naga-native refs/heads/naga-patches-wgpu-29 naga-native
-          resolve wgpu-native https://github.com/davnotdev/wgpu-native refs/heads/godot-webgpu wgpu
-          resolve spirv-webgpu-transform https://github.com/davnotdev/spirv-webgpu-transform HEAD spirv-webgpu-transform
-          resolve dawn https://dawn.googlesource.com/dawn refs/heads/main dawn
+    uses: ./.github/workflows/resolve.yml
 
   deps:
-    name: ${{ matrix.dep }} (${{ matrix.platform }}, ${{ matrix.buildtype }})
     needs: resolve
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        dep: [naga, wgpu-native, spirv-webgpu-transform, dawn]
-        platform: [linuxbsd, windows, web]
-        buildtype: [debug, release]
-        exclude:
-          - dep: wgpu-native
-            platform: web
-          - dep: dawn
-            platform: web
-        include:
-          - dep: naga
-            repo: davnotdev/naga-native
-            out: naga-native
-          - dep: wgpu-native
-            repo: davnotdev/wgpu-native
-            out: wgpu
-          - dep: spirv-webgpu-transform
-            repo: davnotdev/spirv-webgpu-transform
-            out: spirv-webgpu-transform
-          - dep: dawn
-            out: dawn
-          - platform: linuxbsd
-            os: ubuntu-latest
-          - platform: windows
-            os: windows-latest
-          - platform: web
-            os: ubuntu-latest
-    env:
-      SHA: ${{ needs.resolve.outputs[matrix.dep] }}
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          path: ci
-
-      - id: cache
-        uses: actions/cache@v4
-        with:
-          path: stage
-          key: dep-${{ matrix.dep }}-${{ matrix.platform }}-${{ matrix.buildtype }}-${{ env.SHA }}-${{ hashFiles(format('ci/scripts/build-{0}.sh', matrix.dep)) }}-${{ matrix.dep != 'dawn' && format('{0}-{1}', env.RUSTUP_TOOLCHAIN, env.RUST_NIGHTLY) || 'cmake' }}
-
-      - if: steps.cache.outputs.cache-hit != 'true' && matrix.dep != 'dawn'
-        uses: actions/checkout@v4
-        with:
-          repository: ${{ matrix.repo }}
-          ref: ${{ env.SHA }}
-          path: src
-          submodules: recursive
-
-      - if: steps.cache.outputs.cache-hit != 'true' && matrix.dep == 'dawn'
-        run: |
-          git init src
-          git -C src fetch --depth 1 https://dawn.googlesource.com/dawn "$SHA"
-          git -C src checkout FETCH_HEAD
-
-      - if: steps.cache.outputs.cache-hit != 'true' && matrix.dep == 'dawn'
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.x"
-
-      - if: steps.cache.outputs.cache-hit != 'true' && matrix.dep == 'dawn'
-        run: python -m pip install ninja
-
-      - if: steps.cache.outputs.cache-hit != 'true' && matrix.dep == 'dawn' && runner.os == 'Linux'
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y libxrandr-dev libxinerama-dev libxcursor-dev mesa-common-dev libx11-xcb-dev pkg-config
-
-      - if: steps.cache.outputs.cache-hit != 'true' && matrix.dep == 'dawn' && runner.os == 'Windows'
-        uses: ilammy/msvc-dev-cmd@v1
-
-      - if: steps.cache.outputs.cache-hit != 'true' && matrix.dep == 'dawn'
-        uses: hendrikmuhs/ccache-action@v1.2
-        with:
-          variant: sccache
-          key: dawn-${{ matrix.platform }}-${{ matrix.buildtype }}
-
-      - if: steps.cache.outputs.cache-hit != 'true' && matrix.platform == 'web'
-        run: rustup toolchain install "$RUST_NIGHTLY" --profile minimal --component rust-src
-
-      - if: steps.cache.outputs.cache-hit != 'true' && matrix.platform == 'web'
-        uses: mymindstorm/setup-emsdk@v15
-        with:
-          version: ${{ env.EMSDK_VERSION }}
-
-      - if: steps.cache.outputs.cache-hit != 'true' && matrix.dep != 'dawn'
-        run: rustup toolchain install "$RUSTUP_TOOLCHAIN" --profile minimal
-
-      - if: steps.cache.outputs.cache-hit != 'true' && matrix.dep != 'dawn'
-        uses: Swatinem/rust-cache@v2
-        with:
-          workspaces: src
-          key: ${{ matrix.platform }}-${{ matrix.buildtype }}
-
-      - if: steps.cache.outputs.cache-hit != 'true'
-        env:
-          CMAKE_C_COMPILER_LAUNCHER: ${{ matrix.dep == 'dawn' && 'sccache' || '' }}
-          CMAKE_CXX_COMPILER_LAUNCHER: ${{ matrix.dep == 'dawn' && 'sccache' || '' }}
-        run: |
-          mkdir -p "stage/thirdparty/${{ matrix.out }}"
-          stage=$(realpath stage)
-          cd src
-          PLATFORM="${{ matrix.platform }}" BUILDTYPE="${{ matrix.buildtype }}" GODOT_SOURCE="$stage" \
-            bash "../ci/scripts/build-${{ matrix.dep }}.sh"
-
-      - uses: actions/upload-artifact@v4
-        with:
-          name: dep-${{ matrix.dep }}-${{ matrix.platform }}-${{ matrix.buildtype }}
-          path: stage
-          if-no-files-found: error
+    uses: ./.github/workflows/deps.yml
+    with:
+      commits: ${{ needs.resolve.outputs.commits }}
+      emsdk-version: latest
+      rust-toolchain: "1.91"
+      rust-nightly: nightly-2026-10-01
 
   godot:
-    name: godot (${{ matrix.platform }}, ${{ matrix.buildtype }}, ${{ matrix.backend }})
     needs: [resolve, deps]
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        platform: [linuxbsd, windows, web]
-        buildtype: [debug, release]
-        backend: [wgpu-desktop, dawn-desktop, emdawnwebgpu]
-        exclude:
-          - platform: linuxbsd
-            backend: emdawnwebgpu
-          - platform: windows
-            backend: emdawnwebgpu
-          - platform: web
-            backend: wgpu-desktop
-          - platform: web
-            backend: dawn-desktop
-        include:
-          - platform: linuxbsd
-            os: ubuntu-latest
-          - platform: windows
-            os: windows-latest
-          - platform: web
-            os: ubuntu-latest
-          - backend: wgpu-desktop
-            backend-dep: wgpu-native
-          - backend: dawn-desktop
-            backend-dep: dawn
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          path: ci
+    uses: ./.github/workflows/godot.yml
+    with:
+      commits: ${{ needs.resolve.outputs.commits }}
+      emsdk-version: latest
 
-      - uses: actions/checkout@v4
-        with:
-          repository: davnotdev/godot
-          ref: ${{ needs.resolve.outputs.godot }}
-          path: godot
-
-      - uses: actions/download-artifact@v4
-        with:
-          name: dep-naga-${{ matrix.platform }}-${{ matrix.buildtype }}
-          path: godot
-
-      - uses: actions/download-artifact@v4
-        with:
-          name: dep-spirv-webgpu-transform-${{ matrix.platform }}-${{ matrix.buildtype }}
-          path: godot
-
-      - if: matrix.backend-dep
-        uses: actions/download-artifact@v4
-        with:
-          name: dep-${{ matrix.backend-dep }}-${{ matrix.platform }}-${{ matrix.buildtype }}
-          path: godot
-
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.x"
-
-      - run: python -m pip install scons
-
-      - if: matrix.platform == 'linuxbsd'
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y build-essential pkg-config libx11-dev libxcursor-dev libxinerama-dev \
-            libgl1-mesa-dev libglu1-mesa-dev libasound2-dev libpulse-dev libudev-dev libxi-dev \
-            libxrandr-dev libwayland-dev
-
-      - if: matrix.platform == 'web'
-        uses: mymindstorm/setup-emsdk@v15
-        with:
-          version: ${{ env.EMSDK_VERSION }}
-
-      - uses: actions/cache@v4
-        with:
-          path: .scons-cache
-          key: scons-${{ matrix.platform }}-${{ matrix.buildtype }}-${{ matrix.backend }}-${{ needs.resolve.outputs.godot }}
-          restore-keys: scons-${{ matrix.platform }}-${{ matrix.buildtype }}-${{ matrix.backend }}-
-
-      - env:
-          PLATFORM: ${{ matrix.platform }}
-          BUILDTYPE: ${{ matrix.buildtype }}
-          BACKEND: ${{ matrix.backend }}
-        run: |
-          cd godot
-          bash ../ci/scripts/build-godot.sh "cache_path=${{ github.workspace }}/.scons-cache"
-
-      - uses: actions/upload-artifact@v4
-        with:
-          name: godot-${{ matrix.platform }}-${{ matrix.buildtype }}-${{ matrix.backend }}
-          path: godot/bin
-          if-no-files-found: error
+  demos:
+    needs: [resolve, godot]
+    if: ${{ !cancelled() && needs.resolve.result == 'success' }}
+    uses: ./.github/workflows/demos.yml
+    with:
+      commits: ${{ needs.resolve.outputs.commits }}
 
   release:
     needs: [resolve, godot]
     if: github.event_name != 'pull_request'
-    runs-on: ubuntu-latest
+    uses: ./.github/workflows/release.yml
     permissions:
       contents: write
-    steps:
-      - uses: actions/download-artifact@v4
-        with:
-          pattern: godot-*
-          path: dist
-
-      - env:
-          GH_TOKEN: ${{ github.token }}
-          GODOT: ${{ needs.resolve.outputs.godot }}
-          NAGA: ${{ needs.resolve.outputs.naga }}
-          WGPU_NATIVE: ${{ needs.resolve.outputs.wgpu-native }}
-          SPIRV_WEBGPU_TRANSFORM: ${{ needs.resolve.outputs.spirv-webgpu-transform }}
-          DAWN: ${{ needs.resolve.outputs.dawn }}
-        run: |
-          cd dist
-          for dir in */; do
-            (cd "$dir" && zip -qr "../${dir%/}.zip" .)
-          done
-
-          tag="godot-${GODOT:0:10}-${{ github.run_number }}"
-          notes=$(printf '%s\n' \
-            "godot: $GODOT" \
-            "naga-native: $NAGA" \
-            "wgpu-native: $WGPU_NATIVE" \
-            "spirv-webgpu-transform: $SPIRV_WEBGPU_TRANSFORM" \
-            "dawn: $DAWN")
-
-          gh release create "$tag" *.zip \
-            --repo "$GITHUB_REPOSITORY" \
-            --target "$GITHUB_SHA" \
-            --title "$tag" \
-            --notes "$notes"
+    with:
+      commits: ${{ needs.resolve.outputs.commits }}

@@ -25,31 +25,69 @@ jobs:
   resolve:
     uses: ./.github/workflows/resolve.yml
 
-  deps:
+  deps-linuxbsd:
     needs: resolve
     uses: ./.github/workflows/deps.yml
     with:
+      platform: linuxbsd
       commits: ${{ needs.resolve.outputs.commits }}
       emsdk-version: latest
       rust-toolchain: "1.91"
       rust-nightly: nightly-2026-10-01
 
-  godot:
-    needs: [resolve, deps]
+  deps-windows:
+    needs: resolve
+    uses: ./.github/workflows/deps.yml
+    with:
+      platform: windows
+      commits: ${{ needs.resolve.outputs.commits }}
+      emsdk-version: latest
+      rust-toolchain: "1.91"
+      rust-nightly: nightly-2026-10-01
+
+  deps-web:
+    needs: resolve
+    uses: ./.github/workflows/deps.yml
+    with:
+      platform: web
+      commits: ${{ needs.resolve.outputs.commits }}
+      emsdk-version: latest
+      rust-toolchain: "1.91"
+      rust-nightly: nightly-2026-10-01
+
+  godot-linuxbsd:
+    needs: [resolve, deps-linuxbsd]
     uses: ./.github/workflows/godot.yml
     with:
+      platform: linuxbsd
+      commits: ${{ needs.resolve.outputs.commits }}
+      emsdk-version: latest
+
+  godot-windows:
+    needs: [resolve, deps-windows]
+    uses: ./.github/workflows/godot.yml
+    with:
+      platform: windows
+      commits: ${{ needs.resolve.outputs.commits }}
+      emsdk-version: latest
+
+  godot-web:
+    needs: [resolve, deps-web]
+    uses: ./.github/workflows/godot.yml
+    with:
+      platform: web
       commits: ${{ needs.resolve.outputs.commits }}
       emsdk-version: latest
 
   demos:
-    needs: [resolve, godot]
+    needs: [resolve, godot-linuxbsd, godot-web]
     if: ${{ !cancelled() && needs.resolve.result == 'success' }}
     uses: ./.github/workflows/demos.yml
     with:
       commits: ${{ needs.resolve.outputs.commits }}
 
   release:
-    needs: [resolve, godot]
+    needs: [resolve, godot-linuxbsd, godot-windows, godot-web]
     if: github.event_name != 'pull_request'
     uses: ./.github/workflows/release.yml
     permissions:

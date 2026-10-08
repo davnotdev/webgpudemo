@@ -3,6 +3,9 @@ name: Dependencies
 on:
   workflow_call:
     inputs:
+      platform:
+        type: string
+        required: true
       commits:
         type: string
         required: true
@@ -19,43 +22,28 @@ on:
 permissions:
   contents: read
 
+env:
+  DEPS: >-
+    {
+      "naga": {"repo": "davnotdev/naga-native", "out": "naga-native"},
+      "wgpu-native": {"repo": "davnotdev/wgpu-native", "out": "wgpu"},
+      "spirv-webgpu-transform": {"repo": "davnotdev/spirv-webgpu-transform", "out": "spirv-webgpu-transform"},
+      "dawn": {"repo": "", "out": "dawn"}
+    }
+
 defaults:
   run:
     shell: bash
 
 jobs:
   deps:
-    name: ${{ matrix.dep }} (${{ matrix.platform }}, ${{ matrix.buildtype }})
-    runs-on: ${{ matrix.os }}
+    name: ${{ matrix.dep }} (${{ inputs.platform }}, ${{ matrix.buildtype }})
+    runs-on: ${{ inputs.platform == 'windows' && 'windows-latest' || 'ubuntu-latest' }}
     strategy:
       fail-fast: false
       matrix:
-        dep: [naga, wgpu-native, spirv-webgpu-transform, dawn]
-        platform: [linuxbsd, windows, web]
+        dep: ${{ fromJSON(inputs.platform == 'web' && '["naga", "spirv-webgpu-transform"]' || '["naga", "wgpu-native", "spirv-webgpu-transform", "dawn"]') }}
         buildtype: [debug, release]
-        exclude:
-          - dep: wgpu-native
-            platform: web
-          - dep: dawn
-            platform: web
-        include:
-          - dep: naga
-            repo: davnotdev/naga-native
-            out: naga-native
-          - dep: wgpu-native
-            repo: davnotdev/wgpu-native
-            out: wgpu
-          - dep: spirv-webgpu-transform
-            repo: davnotdev/spirv-webgpu-transform
-            out: spirv-webgpu-transform
-          - dep: dawn
-            out: dawn
-          - platform: linuxbsd
-            os: ubuntu-latest
-          - platform: windows
-            os: windows-latest
-          - platform: web
-            os: ubuntu-latest
     env:
       SHA: ${{ fromJSON(inputs.commits)[matrix.dep] }}
       RUSTUP_TOOLCHAIN: ${{ inputs.rust-toolchain }}
@@ -69,12 +57,12 @@ jobs:
         uses: actions/cache@v4
         with:
           path: stage
-          key: dep-${{ matrix.dep }}-${{ matrix.platform }}-${{ matrix.buildtype }}-${{ env.SHA }}-${{ hashFiles(format('ci/scripts/build-{0}.sh', matrix.dep)) }}-${{ matrix.dep != 'dawn' && format('{0}-{1}', env.RUSTUP_TOOLCHAIN, env.RUST_NIGHTLY) || 'cmake' }}
+          key: dep-${{ matrix.dep }}-${{ inputs.platform }}-${{ matrix.buildtype }}-${{ env.SHA }}-${{ hashFiles(format('ci/scripts/build-{0}.sh', matrix.dep)) }}-${{ matrix.dep != 'dawn' && format('{0}-{1}', env.RUSTUP_TOOLCHAIN, env.RUST_NIGHTLY) || 'cmake' }}
 
       - if: steps.cache.outputs.cache-hit != 'true' && matrix.dep != 'dawn'
         uses: actions/checkout@v4
         with:
-          repository: ${{ matrix.repo }}
+          repository: ${{ fromJSON(env.DEPS)[matrix.dep].repo }}
           ref: ${{ env.SHA }}
           path: src
           submodules: recursive
@@ -105,12 +93,12 @@ jobs:
         uses: hendrikmuhs/ccache-action@v1.2
         with:
           variant: sccache
-          key: dawn-${{ matrix.platform }}-${{ matrix.buildtype }}
+          key: dawn-${{ inputs.platform }}-${{ matrix.buildtype }}
 
-      - if: steps.cache.outputs.cache-hit != 'true' && matrix.platform == 'web'
+      - if: steps.cache.outputs.cache-hit != 'true' && inputs.platform == 'web'
         run: rustup toolchain install "$RUST_NIGHTLY" --profile minimal --component rust-src
 
-      - if: steps.cache.outputs.cache-hit != 'true' && matrix.platform == 'web'
+      - if: steps.cache.outputs.cache-hit != 'true' && inputs.platform == 'web'
         uses: mymindstorm/setup-emsdk@v15
         with:
           version: ${{ inputs.emsdk-version }}
@@ -122,21 +110,21 @@ jobs:
         uses: Swatinem/rust-cache@v2
         with:
           workspaces: src
-          key: ${{ matrix.platform }}-${{ matrix.buildtype }}
+          key: ${{ inputs.platform }}-${{ matrix.buildtype }}
 
       - if: steps.cache.outputs.cache-hit != 'true'
         env:
           CMAKE_C_COMPILER_LAUNCHER: ${{ matrix.dep == 'dawn' && 'sccache' || '' }}
           CMAKE_CXX_COMPILER_LAUNCHER: ${{ matrix.dep == 'dawn' && 'sccache' || '' }}
         run: |
-          mkdir -p "stage/thirdparty/${{ matrix.out }}"
+          mkdir -p "stage/thirdparty/${{ fromJSON(env.DEPS)[matrix.dep].out }}"
           stage=$(realpath stage)
           cd src
-          PLATFORM="${{ matrix.platform }}" BUILDTYPE="${{ matrix.buildtype }}" GODOT_SOURCE="$stage" \
+          PLATFORM="${{ inputs.platform }}" BUILDTYPE="${{ matrix.buildtype }}" GODOT_SOURCE="$stage" \
             bash "../ci/scripts/build-${{ matrix.dep }}.sh"
 
       - uses: actions/upload-artifact@v4
         with:
-          name: dep-${{ matrix.dep }}-${{ matrix.platform }}-${{ matrix.buildtype }}
+          name: dep-${{ matrix.dep }}-${{ inputs.platform }}-${{ matrix.buildtype }}
           path: stage
           if-no-files-found: error

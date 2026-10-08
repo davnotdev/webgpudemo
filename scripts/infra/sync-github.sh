@@ -11,6 +11,15 @@ if [ -z "$SYNC_GITHUB_PULLED" ]; then
     SYNC_GITHUB_PULLED=1 exec bash scripts/infra/sync-github.sh "$@"
 fi
 
+if [ -z "$GH_TOKEN" ] && [ -f .env ]; then
+    token=$(sed -nE 's/^(export[[:space:]]+)?GH_TOKEN=//p' .env | tail -n 1 | tr -d '\r')
+    token=${token#[\"\']}
+    token=${token%[\"\']}
+    if [ -n "$token" ]; then
+        export GH_TOKEN=$token
+    fi
+fi
+
 mkdir -p builds/
 
 tags=$(gh release list --limit 1000 --json tagName --jq '.[].tagName')

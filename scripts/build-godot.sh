@@ -40,8 +40,13 @@ case $BUILDTYPE in
         ;;
 esac
 
+export SCONS_DEBUG_SYMBOLS=yes
+
 if [ "$WEB_BUILD" = 1 ]; then
     export SCONS_PLATFORM_FLAGS="$SCONS_PLATFORM_FLAGS target=template_$BUILDTYPE"
+    if [ "$BUILDTYPE" = release ]; then
+        export SCONS_DEBUG_SYMBOLS=no
+    fi
 fi
 
 case $BACKEND in
@@ -74,7 +79,7 @@ esac
 
 scons --max-drift=1 \
     optimize=$SCONS_OPTIMIZE \
-    debug_symbols=yes \
+    debug_symbols=$SCONS_DEBUG_SYMBOLS \
     compiledb=yes \
     webgpu=yes \
     $SCONS_BACKEND_FLAG \

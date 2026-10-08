@@ -93,7 +93,10 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        buildtype: [debug, release]
+        # We do not export using debug as they take too much storage.
+        # You should manually export these if you need them.
+        # buildtype: [debug, release]
+        buildtype: [release]
         shard: ${{ fromJSON(needs.plan.outputs.shards) }}
     env:
       PROJECTS: ${{ toJSON(matrix.shard.projects) }}
@@ -173,7 +176,10 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        buildtype: [debug, release]
+        # We do not export using debug as they take too much storage.
+        # You should manually export these if you need them.
+        # buildtype: [debug, release]
+        buildtype: [release]
     steps:
       - uses: actions/upload-artifact/merge@v4
         with:

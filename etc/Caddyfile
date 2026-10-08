@@ -2,7 +2,7 @@
 # This is for me specifically as you can see.
 
 webgpudemo.davnot.dev {
-        root * /app/webgpudemo/uploads/
+        root * /app/webgpudemo/
         file_server browse
 }
 

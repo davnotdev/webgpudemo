@@ -38,5 +38,5 @@ You can access exported demos at [https://webgpudemo.davnot.dev](https://webgpud
 
 > DISCLAIMER: The Github workflows are written using LLMs.
 > The scripts in this repository are made for reading, but I do not recommend you use or read these workflows.
-> Github Actions was not made for mortals.
+> After all, Github Actions was not made for mortals.
 

@@ -25,7 +25,8 @@ You can access exported demos at [https://webgpudemo.davnot.dev](https://webgpud
 
 Here is the gist of how you would run a build yourself.
 
-> Unfortunately, we currently support have a script for mingw cross compilation.
+> Unfortunately, we currently do not have script support for mingw cross compilation.
+> However, you could do that yourself with mingw and wgpu-desktop only.
 
 ### Install Dependencies for Linux
 

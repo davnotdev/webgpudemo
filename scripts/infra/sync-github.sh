@@ -48,9 +48,21 @@ for tag in $tags; do
         echo "downloading: $tag/$asset"
         gh release download "$tag" --pattern "$asset" --dir "builds/$tag.partial"
 
-        demo=${asset%.zip}
-        demo=${demo%-release}
-        unzip -q "builds/$tag.partial/$asset" -d "builds/$tag.partial/$demo"
+        case $asset in
+            godot-demo-projects-mobile-release.zip)
+                destination="godot-demo-projects/mobile"
+                ;;
+            godot-demo-projects-forward_plus-release.zip)
+                destination="godot-demo-projects/forward_plus"
+                ;;
+            *)
+                demo=${asset%.zip}
+                demo=${demo%-release}
+                destination=$demo
+                ;;
+        esac
+
+        unzip -q "builds/$tag.partial/$asset" -d "builds/$tag.partial/$destination"
         rm "builds/$tag.partial/$asset"
     done
 

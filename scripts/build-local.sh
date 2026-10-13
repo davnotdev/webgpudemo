@@ -10,6 +10,8 @@ set -e
 # PLATFORM=<linuxbsd|windows|web>
 # BUILDTYPE=<debug|release>
 # BACKEND=<wgpu-desktop|dawn-desktop|emdawnwebgpu>
+# Web Only
+# RENDERING_METHOD=<mobile|forward_plus>
 # RUSTUP_TOOLCHAIN=<defaults to 1.91>
 # RUST_NIGHTLY=<defaults to nightly-2026-10-01>
 # FORCE=<1 to rebuild a finished build>
@@ -48,7 +50,11 @@ case $PLATFORM/$BACKEND in
         ;;
 esac
 
-export PLATFORM BUILDTYPE BACKEND
+if [ "$PLATFORM" != web ]; then
+    RENDERING_METHOD=""
+fi
+
+export PLATFORM BUILDTYPE BACKEND RENDERING_METHOD
 export RUSTUP_TOOLCHAIN=${RUSTUP_TOOLCHAIN:-1.91}
 export RUST_NIGHTLY=${RUST_NIGHTLY:-nightly-2026-10-01}
 
@@ -64,7 +70,7 @@ SCRIPTS="$ROOT/scripts"
 SOURCES="$ROOT/local/sources"
 GODOT_COMMIT=$(tr -d '[:space:]' < "$ROOT/source/GODOT_COMMIT")
 check_sha godot "$GODOT_COMMIT"
-BUILD="$ROOT/local/godot-$PLATFORM-$BUILDTYPE-$BACKEND-${GODOT_COMMIT:0:10}"
+BUILD="$ROOT/local/godot-$PLATFORM-$BUILDTYPE-$BACKEND${RENDERING_METHOD:+-$RENDERING_METHOD}-${GODOT_COMMIT:0:10}"
 GODOT="$BUILD/godot"
 
 if [ -f "$BUILD/.done" ] && [ "$FORCE" != 1 ]; then

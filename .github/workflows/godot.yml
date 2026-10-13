@@ -22,16 +22,18 @@ defaults:
 
 jobs:
   godot:
-    name: godot (${{ inputs.platform }}, ${{ matrix.buildtype }}, ${{ matrix.backend }})
+    name: godot (${{ inputs.platform }}, ${{ matrix.buildtype }}, ${{ matrix.backend }}${{ matrix.renderer && format(', {0}', matrix.renderer) || '' }})
     runs-on: ${{ inputs.platform == 'windows' && 'windows-latest' || 'ubuntu-latest' }}
     strategy:
       fail-fast: false
       matrix:
         buildtype: [debug, release]
         backend: ${{ fromJSON(inputs.platform == 'web' && '["emdawnwebgpu"]' || '["wgpu-desktop", "dawn-desktop"]') }}
+        renderer: ${{ fromJSON(inputs.platform == 'web' && '["mobile", "forward_plus"]' || '[""]') }}
     env:
       GODOT_SHA: ${{ fromJSON(inputs.commits).godot }}
       BACKEND_DEP: ${{ matrix.backend == 'wgpu-desktop' && 'wgpu-native' || matrix.backend == 'dawn-desktop' && 'dawn' || '' }}
+      VARIANT: ${{ matrix.backend }}${{ matrix.renderer && format('-{0}', matrix.renderer) || '' }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -80,26 +82,37 @@ jobs:
       - uses: actions/cache@v4
         with:
           path: .scons-cache
-          key: scons-${{ inputs.platform }}-${{ matrix.buildtype }}-${{ matrix.backend }}-${{ env.GODOT_SHA }}
-          restore-keys: scons-${{ inputs.platform }}-${{ matrix.buildtype }}-${{ matrix.backend }}-
+          key: scons-${{ inputs.platform }}-${{ matrix.buildtype }}-${{ env.VARIANT }}-${{ env.GODOT_SHA }}
+          restore-keys: |
+            scons-${{ inputs.platform }}-${{ matrix.buildtype }}-${{ env.VARIANT }}-
+            scons-${{ inputs.platform }}-${{ matrix.buildtype }}-${{ matrix.backend }}-
 
       - env:
           PLATFORM: ${{ inputs.platform }}
           BUILDTYPE: ${{ matrix.buildtype }}
           BACKEND: ${{ matrix.backend }}
+          RENDERING_METHOD: ${{ inputs.platform == 'web' && matrix.renderer || '' }}
         run: |
           cd godot
           bash ../ci/scripts/build-godot.sh "cache_path=${{ github.workspace }}/.scons-cache"
 
+      - if: inputs.platform == 'web'
+        env:
+          RENDERING_METHOD: ${{ matrix.renderer }}
+        run: |
+          for file in godot/bin/*.zip; do
+            mv "$file" "${file%.zip}.$RENDERING_METHOD.zip"
+          done
+
       - uses: actions/upload-artifact@v4
         with:
-          name: godot-${{ inputs.platform }}-${{ matrix.buildtype }}-${{ matrix.backend }}
+          name: godot-${{ inputs.platform }}-${{ matrix.buildtype }}-${{ env.VARIANT }}
           path: godot/bin/${{ inputs.platform == 'windows' && '*.exe' || inputs.platform == 'web' && '*.zip' || 'godot.linuxbsd.*' }}
           if-no-files-found: error
 
       - if: inputs.platform == 'windows'
         uses: actions/upload-artifact@v4
         with:
-          name: godot-${{ inputs.platform }}-${{ matrix.buildtype }}-${{ matrix.backend }}-pdb
+          name: godot-${{ inputs.platform }}-${{ matrix.buildtype }}-${{ env.VARIANT }}-pdb
           path: godot/bin/*.pdb
           if-no-files-found: warn

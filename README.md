@@ -16,8 +16,10 @@ This repository builds the following targets:
 - `windows-release-wgpu-desktop`
 - `windows-debug-dawn-desktop`
 - `windows-release-dawn-desktop`
-- `web-debug-emdawnwebgpu`
-- `web-release-emdawnwebgpu`
+- `web-debug-emdawnwebgpu-mobile`
+- `web-release-emdawnwebgpu-mobile`
+- `web-debug-emdawnwebgpu-forward_plus`
+- `web-release-emdawnwebgpu-forward_plus`
 
 This repository exports the following demos:
 

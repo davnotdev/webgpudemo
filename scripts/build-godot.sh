@@ -5,6 +5,7 @@ set -e
 # PLATFORM=<linuxbsd|windows|web>
 # BUILDTYPE=<debug|release>
 # BACKEND=<wgpu-desktop|dawn-desktop|emdawnwebgpu>
+# RENDERING_METHOD=<mobile|forward_plus, web only, optional>
 
 case $PLATFORM in
     windows)
@@ -73,6 +74,24 @@ case $BACKEND in
         ;;
 esac
 
+if [ "$WEB_BUILD" = 0 ] && [ -n "$RENDERING_METHOD" ]; then
+    echo "Warning: ignoring RENDERING_METHOD=$RENDERING_METHOD on platform: $PLATFORM"
+    RENDERING_METHOD=""
+fi
+
+case $RENDERING_METHOD in
+    "")
+        export SCONS_RENDERING_METHOD_FLAG=""
+        ;;
+    mobile|forward_plus)
+        export SCONS_RENDERING_METHOD_FLAG="webgpu_force_rendering_method=$RENDERING_METHOD"
+        ;;
+    *)
+        echo "Error: unsupported rendering method: $RENDERING_METHOD"
+        exit 1
+        ;;
+esac
+
 # For personal builds I recommend:
 #   - `linker=mold`, but note the license.
 #   - `builtin_*=no` to potentially save on compile time.
@@ -83,6 +102,7 @@ scons --max-drift=1 \
     compiledb=yes \
     webgpu=yes \
     $SCONS_BACKEND_FLAG \
+    $SCONS_RENDERING_METHOD_FLAG \
     $SCONS_PLATFORM_FLAGS \
     "$@"
 

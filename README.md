@@ -8,18 +8,12 @@ Run at your own risk.
 
 This repository builds the following targets:
 
-- `linuxbsd-debug-wgpu-desktop`
-- `linuxbsd-release-wgpu-desktop`
-- `linuxbsd-debug-dawn-desktop`
-- `linuxbsd-release-dawn-desktop`
-- `windows-debug-wgpu-desktop`
-- `windows-release-wgpu-desktop`
-- `windows-debug-dawn-desktop`
-- `windows-release-dawn-desktop`
-- `web-debug-emdawnwebgpu-mobile`
-- `web-release-emdawnwebgpu-mobile`
-- `web-debug-emdawnwebgpu-forward_plus`
-- `web-release-emdawnwebgpu-forward_plus`
+- `linuxbsd-debug-wgpu-desktop`, `linuxbsd-release-wgpu-desktop`, 
+- `linuxbsd-debug-dawn-desktop`, `linuxbsd-release-dawn-desktop`
+- `windows-debug-wgpu-desktop`, `windows-release-wgpu-desktop`
+- `windows-debug-dawn-desktop`, `windows-release-dawn-desktop`
+- `web-debug-emdawnwebgpu-mobile`, `web-release-emdawnwebgpu-mobile`
+- `web-debug-emdawnwebgpu-forward_plus`, `web-release-emdawnwebgpu-forward_plus`
 
 This repository exports the following demos:
 

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Demo repository",
+  "type": "object",
+  "required": ["url", "roots"],
+  "additionalProperties": false,
+  "properties": {
+    "url": {
+      "description": "Git repository to fetch the demo projects from.",
+      "type": "string",
+      "format": "uri"
+    },
+    "commit": {
+      "description": "Commit to export, defaults to the repository HEAD.",
+      "type": ["string", "null"],
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "roots": {
+      "description": "Globs of directories containing project.godot files.",
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "minItems": 1,
+      "uniqueItems": true
+    }
+  }
+}

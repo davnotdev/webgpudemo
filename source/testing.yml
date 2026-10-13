@@ -1,0 +1,689 @@
+# Targets: <desktop-<linuxbsd|windows|macos>-<wgpu|dawn>|web-<linuxbsd|windows|macos>-<chromium|firefox>|web-macos-safari>
+# Statuses: <ok|performance|visual|partial|crash>
+
+demos:
+  godot-demo-projects:
+    2d/bullet_shower:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    2d/custom_drawing:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    2d/dodge_the_creeps:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    2d/drawable_textures:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    2d/dynamic_tilemap_layers:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    2d/finite_state_machine:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    2d/glow:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    2d/hexagonal_map:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    2d/instancing:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    2d/isometric:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    2d/kinematic_character:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    2d/light2d_as_mask:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    2d/lights_and_shadows:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    2d/navigation:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    2d/navigation_astar:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    2d/navigation_mesh_chunks:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    2d/particles:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    2d/physics_platformer:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    2d/physics_tests:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    2d/platformer:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    2d/polygons_lines:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    2d/pong:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    2d/role_playing_game:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    2d/screen_space_shaders:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    2d/skeleton:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    2d/sprite_shaders:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    2d/tween:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    3d/antialiasing:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    3d/csg:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    3d/decals:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    3d/global_illumination:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    3d/graphics_settings:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    3d/ik:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    3d/kinematic_character:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    3d/labels_and_texts:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    3d/lights_and_shadows:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    3d/material_testers:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    3d/navigation:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    3d/navigation_mesh_chunks:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    3d/occlusion_culling_mesh_lod:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    3d/particles:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    3d/physical_light_camera_units:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    3d/physics_interpolation:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    3d/physics_tests:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    3d/platformer:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    3d/procedural_materials:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    3d/ragdoll_physics:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    3d/rigidbody_character:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    3d/sky_shaders:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    3d/soft_body_physics:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    3d/sprites:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    3d/squash_the_creeps:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    3d/tonemap_color_correction:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    3d/truck_town:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    3d/variable_rate_shading:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    3d/visibility_ranges:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    3d/volumetric_fog:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    3d/voxel:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    3d/waypoints:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    compute/heightmap:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    compute/post_shader:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    compute/texture:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    gui/accessibility:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    gui/bidi_and_font_features:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    gui/control_gallery:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    gui/drag_and_drop:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    gui/gd_paint:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    gui/input_mapping:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    gui/msdf_font:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    gui/multiple_resolutions:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    gui/pseudolocalization:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    gui/regex:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    gui/rich_text_bbcode:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    gui/theming_override:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    gui/translation:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:
+    gui/ui_mirroring:
+      # <target>:
+      #   commit:
+      #   mobile:
+      #     status:
+      #     note:
+      #   forward_plus:
+      #     status:
+      #     note:

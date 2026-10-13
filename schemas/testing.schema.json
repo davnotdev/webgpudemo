@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WebGPU demo test results",
+  "type": "object",
+  "required": ["demos"],
+  "additionalProperties": false,
+  "properties": {
+    "demos": {
+      "description": "Demo repositories, named after their `source/demos/*.yml` file.",
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": {
+          "type": ["object", "null"],
+          "propertyNames": { "$ref": "#/$defs/target" },
+          "additionalProperties": { "$ref": "#/$defs/run" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "target": {
+      "type": "string",
+      "pattern": "^(desktop-(linuxbsd|windows|macos)-(wgpu|dawn)|web-(linuxbsd|windows|macos)-(chromium|firefox)|web-macos-safari)$"
+    },
+    "run": {
+      "type": "object",
+      "required": ["commit"],
+      "additionalProperties": false,
+      "properties": {
+        "commit": {
+          "description": "Godot commit this was tested at.",
+          "type": "string",
+          "pattern": "^[0-9a-f]{7,40}$"
+        },
+        "mobile": { "$ref": "#/$defs/result" },
+        "forward_plus": { "$ref": "#/$defs/result" }
+      }
+    },
+    "result": {
+      "type": "object",
+      "required": ["status"],
+      "additionalProperties": false,
+      "properties": {
+        "status": { "enum": ["ok", "performance", "visual", "partial", "crash"] },
+        "note": { "type": ["string", "null"] }
+      }
+    }
+  }
+}

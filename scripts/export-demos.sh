@@ -10,6 +10,7 @@ set -e
 # LOG_DIR=
 # JOBS=<parallel exports, defaults to nproc>
 # TIMEOUT=<per project timeout, defaults to 30m>
+# RENDERING_METHOD=<mobile|forward_plus>
 
 if [ $# -eq 0 ]; then
     echo "Error: no projects given"
@@ -30,6 +31,7 @@ export GODOT_EDITOR=$(realpath "$GODOT_EDITOR")
 export OUTPUT_DIR=$(realpath "$OUTPUT_DIR")
 export LOG_DIR=$(realpath "$LOG_DIR")
 export TIMEOUT=${TIMEOUT:-30m}
+export RENDERING_METHOD="${RENDERING_METHOD:-mobile}"
 export BUILDTYPE
 : > "$LOG_DIR/failed"
 

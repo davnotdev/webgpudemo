@@ -5,6 +5,7 @@ set -e
 # PROJECT_DIR=
 # BUILDTYPE=<debug|release>
 # TEMPLATE=
+# RENDERING_METHOD=<mobile|forward_plus>
 
 case $BUILDTYPE in
     debug)
@@ -20,6 +21,8 @@ case $BUILDTYPE in
         exit 1
         ;;
 esac
+
+export RENDERING_METHOD="${RENDERING_METHOD:-mobile}"
 
 if [ ! -f "$PROJECT_DIR/project.godot" ]; then
     echo "Error: bad project dir: $PROJECT_DIR"
@@ -90,7 +93,7 @@ progressive_web_app/enabled=false
 EOF
 mv "$PRESETS.tmp" "$PRESETS"
 
-awk -v method="forward_plus" '
+awk -v method="$RENDERING_METHOD" '
     /^renderer\/rendering_method\.web=/ { next }
     { print }
     $0 == "[rendering]" { print "renderer/rendering_method.web=\"" method "\""; found = 1 }

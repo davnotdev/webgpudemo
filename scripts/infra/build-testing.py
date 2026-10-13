@@ -15,7 +15,7 @@ MARKS = {"ok": "✅", "performance": "⏱️", "visual": "👁️", "partial": "
 UNTESTED = "❔"
 PLATFORMS = ["linuxbsd", "windows", "macos"]
 TARGETS = [f"desktop-{platform}-{backend}" for platform in PLATFORMS for backend in ["wgpu", "dawn"]] + [
-    f"web-{platform}-{browser}" for platform in PLATFORMS for browser in ["chromium", "firefox"]
+    f"web-{platform}-{browser}" for browser in ["chromium", "firefox"] for platform in PLATFORMS
 ] + ["web-macos-safari"]
 
 testing = yaml.safe_load((ROOT / "source/testing.yml").read_text())

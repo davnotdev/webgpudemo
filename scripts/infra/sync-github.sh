@@ -62,6 +62,7 @@ for tag in $tags; do
                 ;;
         esac
 
+        mkdir -p "builds/$tag.partial/$destination"
         unzip -q "builds/$tag.partial/$asset" -d "builds/$tag.partial/$destination"
         rm "builds/$tag.partial/$asset"
     done

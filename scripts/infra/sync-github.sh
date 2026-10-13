@@ -3,8 +3,22 @@
 set -e
 
 # Downloads new demo projects into local `builds/` 
+# Usage: sync-github.sh [--latest]
 
 cd "$(dirname "$(realpath "$0")")/../.."
+
+LATEST_ONLY=0
+for arg in "$@"; do
+    case $arg in
+        --latest)
+            LATEST_ONLY=1
+            ;;
+        *)
+            echo "Error: unknown argument: $arg"
+            exit 1
+            ;;
+    esac
+done
 
 if [ -z "$SYNC_GITHUB_PULLED" ]; then
     git pull --ff-only
@@ -23,6 +37,9 @@ fi
 mkdir -p builds/
 
 tags=$(gh release list --limit 1000 --json tagName --jq '.[].tagName')
+if [ "$LATEST_ONLY" = 1 ]; then
+    tags=$(head -n 1 <<< "$tags")
+fi
 
 for tag in $tags; do
     if [ -d "builds/$tag" ]; then

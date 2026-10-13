@@ -3,6 +3,9 @@
 
 webgpudemo.davnot.dev {
         root * /app/webgpudemo/
+
+        @latest path /latest /latest/*
+        header @latest Cache-Control "no-cache"
+
         file_server browse
 }
-

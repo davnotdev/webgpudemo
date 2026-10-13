@@ -4,686 +4,5961 @@
 demos:
   godot-demo-projects:
     2d/bullet_shower:
-      # <target>:
+      desktop-linuxbsd-wgpu:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      desktop-linuxbsd-dawn:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # desktop-windows-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      web-linuxbsd-chromium:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     2d/custom_drawing:
-      # <target>:
+      # desktop-linuxbsd-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-linuxbsd-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     2d/dodge_the_creeps:
-      # <target>:
+      desktop-linuxbsd-wgpu:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      desktop-linuxbsd-dawn:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # desktop-windows-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      web-linuxbsd-chromium:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      web-windows-chromium:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     2d/drawable_textures:
-      # <target>:
+      # desktop-linuxbsd-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-linuxbsd-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     2d/dynamic_tilemap_layers:
-      # <target>:
+      desktop-linuxbsd-wgpu:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      desktop-linuxbsd-dawn:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # desktop-windows-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      web-linuxbsd-chromium:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     2d/finite_state_machine:
-      # <target>:
+      desktop-linuxbsd-wgpu:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      desktop-linuxbsd-dawn:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # desktop-windows-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      web-linuxbsd-chromium:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     2d/glow:
-      # <target>:
+      desktop-linuxbsd-wgpu:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      desktop-linuxbsd-dawn:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # desktop-windows-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      web-linuxbsd-chromium:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     2d/hexagonal_map:
-      # <target>:
+      desktop-linuxbsd-wgpu:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      desktop-linuxbsd-dawn:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # desktop-windows-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      web-linuxbsd-chromium:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     2d/instancing:
-      # <target>:
+      desktop-linuxbsd-wgpu:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      desktop-linuxbsd-dawn:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # desktop-windows-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      web-linuxbsd-chromium:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     2d/isometric:
-      # <target>:
+      desktop-linuxbsd-wgpu:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      desktop-linuxbsd-dawn:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # desktop-windows-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      web-linuxbsd-chromium:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     2d/kinematic_character:
-      # <target>:
+      desktop-linuxbsd-wgpu:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      desktop-linuxbsd-dawn:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # desktop-windows-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      web-linuxbsd-chromium:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     2d/light2d_as_mask:
-      # <target>:
+      desktop-linuxbsd-wgpu:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      desktop-linuxbsd-dawn:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # desktop-windows-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      web-linuxbsd-chromium:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     2d/lights_and_shadows:
-      # <target>:
+      desktop-linuxbsd-wgpu:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      desktop-linuxbsd-dawn:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # desktop-windows-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      web-linuxbsd-chromium:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     2d/navigation:
-      # <target>:
+      desktop-linuxbsd-wgpu:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      desktop-linuxbsd-dawn:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # desktop-windows-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      web-linuxbsd-chromium:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     2d/navigation_astar:
-      # <target>:
+      desktop-linuxbsd-wgpu:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      desktop-linuxbsd-dawn:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # desktop-windows-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      web-linuxbsd-chromium:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     2d/navigation_mesh_chunks:
-      # <target>:
+      desktop-linuxbsd-wgpu:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      desktop-linuxbsd-dawn:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # desktop-windows-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      web-linuxbsd-chromium:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     2d/particles:
-      # <target>:
+      desktop-linuxbsd-wgpu:
+        commit: 1f8cdbca78
+        mobile:
+          status: visual
+          note: Missing particles
+        forward_plus:
+          status: visual
+          note: Missing particles
+      desktop-linuxbsd-dawn:
+        commit: 1f8cdbca78
+        mobile:
+          status: visual
+          note:
+        forward_plus:
+          status: visual
+          note:
+      # desktop-windows-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      web-linuxbsd-chromium:
+        commit: 1f8cdbca78
+        mobile:
+          status: visual
+          note:
+        forward_plus:
+          status: visual
+          note:
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     2d/physics_platformer:
-      # <target>:
+      desktop-linuxbsd-wgpu:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      desktop-linuxbsd-dawn:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # desktop-windows-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      web-linuxbsd-chromium:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     2d/physics_tests:
-      # <target>:
+      desktop-linuxbsd-wgpu:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      desktop-linuxbsd-dawn:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # desktop-windows-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      web-linuxbsd-chromium:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     2d/platformer:
-      # <target>:
+      desktop-linuxbsd-wgpu:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      desktop-linuxbsd-dawn:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # desktop-windows-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      web-linuxbsd-chromium:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     2d/polygons_lines:
-      # <target>:
+      desktop-linuxbsd-wgpu:
+        commit: 1f8cdbca78
+        mobile:
+          status: partial
+          note: MSAA crash
+        forward_plus:
+          status: partial
+          note: MSAA crash
+      desktop-linuxbsd-dawn:
+        commit: 1f8cdbca78
+        mobile:
+          status: partial
+          note: MSAA crash
+        forward_plus:
+          status: partial
+          note: MSAA crash
+      # desktop-windows-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      web-linuxbsd-chromium:
+        commit: 1f8cdbca78
+        mobile:
+          status: partial
+          note:
+        forward_plus:
+          status: partial
+          note:
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     2d/pong:
-      # <target>:
+      desktop-linuxbsd-wgpu:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      desktop-linuxbsd-dawn:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # desktop-windows-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      web-linuxbsd-chromium:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     2d/role_playing_game:
-      # <target>:
+      desktop-linuxbsd-wgpu:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      desktop-linuxbsd-dawn:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # desktop-windows-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      web-linuxbsd-chromium:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     2d/screen_space_shaders:
-      # <target>:
+      desktop-linuxbsd-wgpu:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      desktop-linuxbsd-dawn:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # desktop-windows-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      web-linuxbsd-chromium:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     2d/skeleton:
-      # <target>:
+      desktop-linuxbsd-wgpu:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      desktop-linuxbsd-dawn:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # desktop-windows-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      web-linuxbsd-chromium:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     2d/sprite_shaders:
-      # <target>:
+      desktop-linuxbsd-wgpu:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      desktop-linuxbsd-dawn:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # desktop-windows-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      web-linuxbsd-chromium:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     2d/tween:
-      # <target>:
+      desktop-linuxbsd-wgpu:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      desktop-linuxbsd-dawn:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # desktop-windows-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      web-linuxbsd-chromium:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     3d/antialiasing:
-      # <target>:
+      # desktop-linuxbsd-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-linuxbsd-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     3d/csg:
-      # <target>:
+      # desktop-linuxbsd-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-linuxbsd-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     3d/decals:
-      # <target>:
+      # desktop-linuxbsd-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-linuxbsd-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     3d/global_illumination:
-      # <target>:
+      # desktop-linuxbsd-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-linuxbsd-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     3d/graphics_settings:
-      # <target>:
+      # desktop-linuxbsd-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-linuxbsd-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     3d/ik:
-      # <target>:
+      # desktop-linuxbsd-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-linuxbsd-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     3d/kinematic_character:
-      # <target>:
+      desktop-linuxbsd-wgpu:
+        commit: 1f8cdbca78
+        forward_plus:
+          status: ok
+      desktop-linuxbsd-dawn:
+        commit: 1f8cdbca78
+        forward_plus:
+          status: ok
+      # desktop-windows-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      web-linuxbsd-chromium:
+        commit: 1f8cdbca78
+        forward_plus:
+          status: ok
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     3d/labels_and_texts:
-      # <target>:
+      desktop-linuxbsd-wgpu:
+        commit: 1f8cdbca78
+        forward_plus:
+          status: ok
+      desktop-linuxbsd-dawn:
+        commit: 1f8cdbca78
+        forward_plus:
+          status: ok
+      # desktop-windows-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      web-linuxbsd-chromium:
+        commit: 1f8cdbca78
+        forward_plus:
+          status: ok
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     3d/lights_and_shadows:
-      # <target>:
+      # desktop-linuxbsd-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-linuxbsd-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     3d/material_testers:
-      # <target>:
+      # desktop-linuxbsd-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-linuxbsd-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     3d/navigation:
-      # <target>:
+      desktop-linuxbsd-wgpu:
+        commit: 1f8cdbca78
+        forward_plus:
+          status: ok
+      desktop-linuxbsd-dawn:
+        commit: 1f8cdbca78
+        forward_plus:
+          status: ok
+      # desktop-windows-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      web-linuxbsd-chromium:
+        commit: 1f8cdbca78
+        forward_plus:
+          status: ok
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     3d/navigation_mesh_chunks:
-      # <target>:
+      desktop-linuxbsd-wgpu:
+        commit: 1f8cdbca78
+        forward_plus:
+          status: ok
+      desktop-linuxbsd-dawn:
+        commit: 1f8cdbca78
+        forward_plus:
+          status: ok
+      # desktop-windows-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      web-linuxbsd-chromium:
+        commit: 1f8cdbca78
+        forward_plus:
+          status: ok
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     3d/occlusion_culling_mesh_lod:
-      # <target>:
+      # desktop-linuxbsd-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-linuxbsd-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     3d/particles:
-      # <target>:
+      # desktop-linuxbsd-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-linuxbsd-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     3d/physical_light_camera_units:
-      # <target>:
+      # desktop-linuxbsd-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-linuxbsd-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     3d/physics_interpolation:
-      # <target>:
+      # desktop-linuxbsd-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-linuxbsd-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     3d/physics_tests:
-      # <target>:
+      desktop-linuxbsd-wgpu:
+        commit: 1f8cdbca78
+        forward_plus:
+          status: ok
+      desktop-linuxbsd-dawn:
+        commit: 1f8cdbca78
+        forward_plus:
+          status: ok
+      # desktop-windows-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      web-linuxbsd-chromium:
+        commit: 1f8cdbca78
+        forward_plus:
+          status: ok
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     3d/platformer:
-      # <target>:
+      # desktop-linuxbsd-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-linuxbsd-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     3d/procedural_materials:
-      # <target>:
+      # desktop-linuxbsd-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-linuxbsd-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     3d/ragdoll_physics:
-      # <target>:
+      # desktop-linuxbsd-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-linuxbsd-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     3d/rigidbody_character:
-      # <target>:
+      desktop-linuxbsd-wgpu:
+        commit: 1f8cdbca78
+        forward_plus:
+          status: ok
+      desktop-linuxbsd-dawn:
+        commit: 1f8cdbca78
+        forward_plus:
+          status: ok
+      # desktop-windows-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      web-linuxbsd-chromium:
+        commit: 1f8cdbca78
+        forward_plus:
+          status: ok
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     3d/sky_shaders:
-      # <target>:
+      # desktop-linuxbsd-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-linuxbsd-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     3d/soft_body_physics:
-      # <target>:
+      # desktop-linuxbsd-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-linuxbsd-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     3d/sprites:
-      # <target>:
+      desktop-linuxbsd-wgpu:
+        commit: 1f8cdbca78
+        forward_plus:
+          status: ok
+      desktop-linuxbsd-dawn:
+        commit: 1f8cdbca78
+        forward_plus:
+          status: ok
+      # desktop-windows-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      web-linuxbsd-chromium:
+        commit: 1f8cdbca78
+        forward_plus:
+          status: ok
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     3d/squash_the_creeps:
-      # <target>:
+      desktop-linuxbsd-wgpu:
+        commit: 1f8cdbca78
+        forward_plus:
+          status: ok
+      desktop-linuxbsd-dawn:
+        commit: 1f8cdbca78
+        forward_plus:
+          status: ok
+      # desktop-windows-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      web-linuxbsd-chromium:
+        commit: 1f8cdbca78
+        forward_plus:
+          status: ok
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     3d/tonemap_color_correction:
-      # <target>:
+      # desktop-linuxbsd-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-linuxbsd-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     3d/truck_town:
-      # <target>:
+      # desktop-linuxbsd-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-linuxbsd-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     3d/variable_rate_shading:
-      # <target>:
+      # desktop-linuxbsd-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-linuxbsd-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     3d/visibility_ranges:
-      # <target>:
+      # desktop-linuxbsd-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-linuxbsd-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     3d/volumetric_fog:
-      # <target>:
+      # desktop-linuxbsd-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-linuxbsd-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     3d/voxel:
-      # <target>:
+      # desktop-linuxbsd-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-linuxbsd-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     3d/waypoints:
-      # <target>:
+      desktop-linuxbsd-wgpu:
+        commit: 1f8cdbca78
+        forward_plus:
+          status: ok
+      desktop-linuxbsd-dawn:
+        commit: 1f8cdbca78
+        forward_plus:
+          status: ok
+      # desktop-windows-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      web-linuxbsd-chromium:
+        commit: 1f8cdbca78
+        forward_plus:
+          status: ok
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     compute/heightmap:
-      # <target>:
+      # desktop-linuxbsd-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-linuxbsd-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     compute/post_shader:
-      # <target>:
+      # desktop-linuxbsd-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-linuxbsd-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     compute/texture:
-      # <target>:
+      desktop-linuxbsd-wgpu:
+        commit: 1f8cdbca78
+        forward_plus:
+          status: visual
+          note: Missing water texture
+      # desktop-linuxbsd-dawn:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-windows-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      web-linuxbsd-chromium:
+        commit: 1f8cdbca78
+        forward_plus:
+          status: ok
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     gui/accessibility:
-      # <target>:
+      # desktop-linuxbsd-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-linuxbsd-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     gui/bidi_and_font_features:
-      # <target>:
+      # desktop-linuxbsd-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-linuxbsd-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     gui/control_gallery:
-      # <target>:
+      # desktop-linuxbsd-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-linuxbsd-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     gui/drag_and_drop:
-      # <target>:
+      desktop-linuxbsd-wgpu:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      desktop-linuxbsd-dawn:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # desktop-windows-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      web-linuxbsd-chromium:
+        commit: 1f8cdbca78
+        mobile:
+          status: ok
+        forward_plus:
+          status: ok
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     gui/gd_paint:
-      # <target>:
+      # desktop-linuxbsd-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-linuxbsd-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     gui/input_mapping:
-      # <target>:
+      # desktop-linuxbsd-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-linuxbsd-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     gui/msdf_font:
-      # <target>:
+      # desktop-linuxbsd-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-linuxbsd-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     gui/multiple_resolutions:
-      # <target>:
+      # desktop-linuxbsd-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-linuxbsd-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     gui/pseudolocalization:
-      # <target>:
+      # desktop-linuxbsd-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-linuxbsd-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     gui/regex:
-      # <target>:
+      # desktop-linuxbsd-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-linuxbsd-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     gui/rich_text_bbcode:
-      # <target>:
+      # desktop-linuxbsd-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-linuxbsd-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     gui/theming_override:
-      # <target>:
+      # desktop-linuxbsd-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-linuxbsd-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     gui/translation:
-      # <target>:
+      # desktop-linuxbsd-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-linuxbsd-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
     gui/ui_mirroring:
-      # <target>:
+      # desktop-linuxbsd-wgpu:
       #   commit:
       #   mobile:
       #     status:
-      #     note:
       #   forward_plus:
       #     status:
-      #     note:
+      # desktop-linuxbsd-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-windows-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-wgpu:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # desktop-macos-dawn:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-linuxbsd-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-windows-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-chromium:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-firefox:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:
+      # web-macos-safari:
+      #   commit:
+      #   mobile:
+      #     status:
+      #   forward_plus:
+      #     status:

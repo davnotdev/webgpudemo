@@ -62,11 +62,11 @@ demos:
           status:
       web-windows-chromium:
         mobile:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
         forward_plus:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
       web-windows-firefox:
         mobile:
           commit:
@@ -430,11 +430,11 @@ demos:
           status:
       web-windows-chromium:
         mobile:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
         forward_plus:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
       web-windows-firefox:
         mobile:
           commit:
@@ -522,11 +522,11 @@ demos:
           status:
       web-windows-chromium:
         mobile:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
         forward_plus:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
       web-windows-firefox:
         mobile:
           commit:
@@ -614,11 +614,11 @@ demos:
           status:
       web-windows-chromium:
         mobile:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
         forward_plus:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
       web-windows-firefox:
         mobile:
           commit:
@@ -706,11 +706,11 @@ demos:
           status:
       web-windows-chromium:
         mobile:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
         forward_plus:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
       web-windows-firefox:
         mobile:
           commit:
@@ -798,11 +798,11 @@ demos:
           status:
       web-windows-chromium:
         mobile:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
         forward_plus:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
       web-windows-firefox:
         mobile:
           commit:
@@ -890,11 +890,11 @@ demos:
           status:
       web-windows-chromium:
         mobile:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
         forward_plus:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
       web-windows-firefox:
         mobile:
           commit:
@@ -982,11 +982,11 @@ demos:
           status:
       web-windows-chromium:
         mobile:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
         forward_plus:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
       web-windows-firefox:
         mobile:
           commit:
@@ -1074,11 +1074,11 @@ demos:
           status:
       web-windows-chromium:
         mobile:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
         forward_plus:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
       web-windows-firefox:
         mobile:
           commit:
@@ -1166,11 +1166,11 @@ demos:
           status:
       web-windows-chromium:
         mobile:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
         forward_plus:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
       web-windows-firefox:
         mobile:
           commit:
@@ -1258,11 +1258,11 @@ demos:
           status:
       web-windows-chromium:
         mobile:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
         forward_plus:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
       web-windows-firefox:
         mobile:
           commit:
@@ -1350,11 +1350,11 @@ demos:
           status:
       web-windows-chromium:
         mobile:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
         forward_plus:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
       web-windows-firefox:
         mobile:
           commit:
@@ -1442,11 +1442,11 @@ demos:
           status:
       web-windows-chromium:
         mobile:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
         forward_plus:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
       web-windows-firefox:
         mobile:
           commit:
@@ -1540,11 +1540,13 @@ demos:
           status:
       web-windows-chromium:
         mobile:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: visual
+          note:
         forward_plus:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: visual
+          note:
       web-windows-firefox:
         mobile:
           commit:
@@ -1632,11 +1634,11 @@ demos:
           status:
       web-windows-chromium:
         mobile:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
         forward_plus:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
       web-windows-firefox:
         mobile:
           commit:
@@ -1724,11 +1726,11 @@ demos:
           status:
       web-windows-chromium:
         mobile:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
         forward_plus:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
       web-windows-firefox:
         mobile:
           commit:
@@ -1816,11 +1818,11 @@ demos:
           status:
       web-windows-chromium:
         mobile:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
         forward_plus:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
       web-windows-firefox:
         mobile:
           commit:
@@ -1914,11 +1916,13 @@ demos:
           status:
       web-windows-chromium:
         mobile:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: partial
+          note:
         forward_plus:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: partial
+          note:
       web-windows-firefox:
         mobile:
           commit:
@@ -2006,11 +2010,11 @@ demos:
           status:
       web-windows-chromium:
         mobile:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
         forward_plus:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
       web-windows-firefox:
         mobile:
           commit:
@@ -2098,11 +2102,11 @@ demos:
           status:
       web-windows-chromium:
         mobile:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
         forward_plus:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
       web-windows-firefox:
         mobile:
           commit:
@@ -2190,11 +2194,11 @@ demos:
           status:
       web-windows-chromium:
         mobile:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
         forward_plus:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
       web-windows-firefox:
         mobile:
           commit:
@@ -2282,11 +2286,11 @@ demos:
           status:
       web-windows-chromium:
         mobile:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
         forward_plus:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
       web-windows-firefox:
         mobile:
           commit:
@@ -2374,11 +2378,11 @@ demos:
           status:
       web-windows-chromium:
         mobile:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
         forward_plus:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
       web-windows-firefox:
         mobile:
           commit:
@@ -2466,11 +2470,11 @@ demos:
           status:
       web-windows-chromium:
         mobile:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
         forward_plus:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
       web-windows-firefox:
         mobile:
           commit:
@@ -5968,11 +5972,11 @@ demos:
           status:
       web-windows-chromium:
         mobile:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
         forward_plus:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
       web-windows-firefox:
         mobile:
           commit:
@@ -6004,18 +6008,18 @@ demos:
     gui/gd_paint:
       desktop-linuxbsd-wgpu:
         mobile:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
         forward_plus:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
       desktop-linuxbsd-dawn:
         mobile:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
         forward_plus:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
       desktop-windows-wgpu:
         mobile:
           commit:
@@ -6046,11 +6050,11 @@ demos:
           status:
       web-linuxbsd-chromium:
         mobile:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
         forward_plus:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
       web-linuxbsd-firefox:
         mobile:
           commit:
@@ -6060,11 +6064,11 @@ demos:
           status:
       web-windows-chromium:
         mobile:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
         forward_plus:
-          commit:
-          status:
+          commit: 1f8cdbca78
+          status: ok
       web-windows-firefox:
         mobile:
           commit:

@@ -12,8 +12,8 @@ set -e
 # BACKEND=<wgpu-desktop|dawn-desktop|emdawnwebgpu>
 # Web Only
 # RENDERING_METHOD=<mobile|forward_plus>
-# RUSTUP_TOOLCHAIN=<defaults to 1.91>
-# RUST_NIGHTLY=<defaults to nightly-2026-10-01>
+# RUSTUP_TOOLCHAIN=<defaults to source/RUSTUP_TOOLCHAIN>
+# RUST_NIGHTLY=<defaults to source/RUST_NIGHTLY>
 # FORCE=<1 to rebuild a finished build>
 
 case $PLATFORM in
@@ -55,8 +55,6 @@ if [ "$PLATFORM" != web ]; then
 fi
 
 export PLATFORM BUILDTYPE BACKEND RENDERING_METHOD
-export RUSTUP_TOOLCHAIN=${RUSTUP_TOOLCHAIN:-1.91}
-export RUST_NIGHTLY=${RUST_NIGHTLY:-nightly-2026-10-01}
 
 check_sha() {
     if ! [[ $2 =~ ^[0-9a-f]{40}$ ]]; then
@@ -68,6 +66,8 @@ check_sha() {
 ROOT=$(realpath "$(dirname "$(realpath "$0")")/..")
 SCRIPTS="$ROOT/scripts"
 SOURCES="$ROOT/local/sources"
+export RUSTUP_TOOLCHAIN=${RUSTUP_TOOLCHAIN:-$(tr -d '[:space:]' < "$ROOT/source/RUSTUP_TOOLCHAIN")}
+export RUST_NIGHTLY=${RUST_NIGHTLY:-$(tr -d '[:space:]' < "$ROOT/source/RUST_NIGHTLY")}
 GODOT_COMMIT=$(tr -d '[:space:]' < "$ROOT/source/GODOT_COMMIT")
 check_sha godot "$GODOT_COMMIT"
 BUILD="$ROOT/local/godot-$PLATFORM-$BUILDTYPE-$BACKEND${RENDERING_METHOD:+-$RENDERING_METHOD}-${GODOT_COMMIT:0:10}"

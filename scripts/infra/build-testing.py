@@ -40,7 +40,7 @@ def render_table(projects):
             parts = []
             for renderer, (letter, label) in RENDERERS.items():
                 result = run.get(renderer)
-                if result is None:
+                if result is None or result.get("status") is None:
                     parts.append(f"{letter} {UNTESTED}")
                     continue
                 part = f"{letter} {MARKS[result['status']]}"

@@ -5,6 +5,10 @@ on:
     outputs:
       commits:
         value: ${{ jobs.resolve.outputs.commits }}
+      rust-toolchain:
+        value: ${{ jobs.resolve.outputs.rust-toolchain }}
+      rust-nightly:
+        value: ${{ jobs.resolve.outputs.rust-nightly }}
 
 permissions:
   contents: read
@@ -18,8 +22,21 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       commits: ${{ steps.resolve.outputs.commits }}
+      rust-toolchain: ${{ steps.rust.outputs.toolchain }}
+      rust-nightly: ${{ steps.rust.outputs.nightly }}
     steps:
       - uses: actions/checkout@v4
+
+      - id: rust
+        run: |
+          for file in RUSTUP_TOOLCHAIN RUST_NIGHTLY; do
+            if [ ! -s "source/$file" ]; then
+              echo "Error: missing source/$file"
+              exit 1
+            fi
+          done
+          echo "toolchain=$(tr -d '[:space:]' < source/RUSTUP_TOOLCHAIN)" >> "$GITHUB_OUTPUT"
+          echo "nightly=$(tr -d '[:space:]' < source/RUST_NIGHTLY)" >> "$GITHUB_OUTPUT"
 
       - id: resolve
         run: |

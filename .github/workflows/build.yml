@@ -28,8 +28,8 @@ jobs:
       platform: linuxbsd
       commits: ${{ needs.resolve.outputs.commits }}
       emsdk-version: latest
-      rust-toolchain: "1.91"
-      rust-nightly: nightly-2026-10-01
+      rust-toolchain: ${{ needs.resolve.outputs.rust-toolchain }}
+      rust-nightly: ${{ needs.resolve.outputs.rust-nightly }}
 
   deps-windows:
     needs: resolve
@@ -38,8 +38,8 @@ jobs:
       platform: windows
       commits: ${{ needs.resolve.outputs.commits }}
       emsdk-version: latest
-      rust-toolchain: "1.91"
-      rust-nightly: nightly-2026-10-01
+      rust-toolchain: ${{ needs.resolve.outputs.rust-toolchain }}
+      rust-nightly: ${{ needs.resolve.outputs.rust-nightly }}
 
   deps-web:
     needs: resolve
@@ -48,8 +48,8 @@ jobs:
       platform: web
       commits: ${{ needs.resolve.outputs.commits }}
       emsdk-version: latest
-      rust-toolchain: "1.91"
-      rust-nightly: nightly-2026-10-01
+      rust-toolchain: ${{ needs.resolve.outputs.rust-toolchain }}
+      rust-nightly: ${{ needs.resolve.outputs.rust-nightly }}
 
   godot-linuxbsd:
     needs: [resolve, deps-linuxbsd]

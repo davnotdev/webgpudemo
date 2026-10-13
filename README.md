@@ -21,6 +21,78 @@ This repository exports the following demos:
 
 You can access exported demos at [https://webgpudemo.davnot.dev](https://webgpudemo.davnot.dev).
 
+## Running Locally
+
+Here is the gist of how you would run a build yourself.
+
+> Unfortunately, we currently support have a script for mingw cross compilation.
+
+### Install Dependencies for Linux
+
+```sh
+sudo apt-get install -y git python3 scons clang llvm lld
+
+# For Linux Build
+sudo apt-get install -y build-essential pkg-config libx11-dev libxcursor-dev libxinerama-dev \
+    libgl1-mesa-dev libglu1-mesa-dev libasound2-dev libpulse-dev libudev-dev libxi-dev \
+    libxrandr-dev libwayland-dev
+
+# For dawn builds
+sudo apt-get install -y cmake ninja-build libx11-xcb-dev mesa-common-dev
+```
+
+You will need to setup [Rust](https://rustup.rs/) and install the nightly toolchain.
+
+```sh
+rustup toolchain install nightly --component rust-src
+```
+
+For web builds, you will need to install emscripten
+
+```sh
+git clone https://github.com/emscripten-core/emsdk.git
+cd emsdk
+./emsdk install latest
+./emsdk activate latest
+source ./emsdk_env.sh
+cd ..
+```
+
+### Install Dependencies for Windows
+
+Windows builds use MSVC and must be built natively on Windows.
+Install MSVC, then from PowerShell:
+
+```powershell
+winget install Git.Git
+winget install Python.Python.3.12
+winget install Rustlang.Rustup
+winget install Kitware.CMake
+winget install Ninja-build.Ninja
+py -m pip install scons
+```
+
+CMake and Ninja are only needed for dawn builds.
+Make sure Python's `Scripts` directory is on your `PATH` so that `scons` can be found.
+
+Builds must run from Git Bash inside an MSVC environment.
+
+### Fetching Sources and Compiling 
+
+```sh
+PLATFORM=<linuxbsd|windows|web> \
+BUILDTYPE=<debug|release> \
+BACKEND=<wgpu-desktop|dawn-desktop|emdawnwebgpu> \
+# CAUTION: Mixing different rustc's can cause link errors. 
+# You should set these to whatever toolchain you have installed
+RUSTUP_TOOLCHAIN=<pinned to source/RUSTUP_TOOLCHAIN>> \
+RUST_NIGHTLY=<pinned to source/RUSTUP_NIGHTLY> \
+# Web only
+RENDERING_METHOD=<mobile|forward_plus> \
+# ---
+bash scripts/build-local.sh
+```
+
 ## Things to Note
 
 - Run with `--rendering-driver webgpu`

@@ -25,26 +25,28 @@
     },
     "run": {
       "type": "object",
-      "required": ["commit"],
       "additionalProperties": false,
       "properties": {
-        "commit": {
-          "description": "Godot commit this was tested at.",
-          "type": "string",
-          "pattern": "^[0-9a-f]{7,40}$"
-        },
         "mobile": { "$ref": "#/$defs/result" },
         "forward_plus": { "$ref": "#/$defs/result" }
       }
     },
     "result": {
+      "description": "Leave status empty for untested, a set status needs a commit.",
       "type": "object",
-      "required": ["status"],
+      "required": ["commit", "status"],
       "additionalProperties": false,
       "properties": {
-        "status": { "enum": ["ok", "performance", "visual", "partial", "crash"] },
+        "commit": {
+          "description": "Godot commit this was tested at.",
+          "type": ["string", "null"],
+          "pattern": "^[0-9a-f]{7,40}$"
+        },
+        "status": { "enum": ["ok", "performance", "visual", "partial", "crash", null] },
         "note": { "type": ["string", "null"] }
-      }
+      },
+      "if": { "properties": { "status": { "type": "string" } } },
+      "then": { "properties": { "commit": { "type": "string" } } }
     }
   }
 }

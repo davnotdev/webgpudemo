@@ -192,7 +192,7 @@ demos:
     2d/dodge_the_creeps:
       desktop-linuxbsd-wgpu:
         mobile:
-          commit: 1f8cdbca78
+          commit: fed92289f3
           status: ok
         forward_plus:
           commit: 1f8cdbca78
@@ -2602,15 +2602,17 @@ demos:
     3d/csg:
       desktop-linuxbsd-wgpu:
         mobile:
-          commit:
-          status:
+          commit: fed92289f3
+          status: visual
+          note: Missing texture
         forward_plus:
-          commit:
-          status:
+          commit: fed92289f3
+          status: ok
       desktop-linuxbsd-dawn:
         mobile:
-          commit:
-          status:
+          commit: fed92289f3
+          status: visual
+          note: Missing texture
         forward_plus:
           commit:
           status:
@@ -2694,15 +2696,17 @@ demos:
     3d/decals:
       desktop-linuxbsd-wgpu:
         mobile:
-          commit:
-          status:
+          commit: fed92289f3
+          status: visual
+          note: Missing texture (Vulkan too)
         forward_plus:
-          commit:
-          status:
+          commit: fed92289f3
+          status: ok
       desktop-linuxbsd-dawn:
         mobile:
-          commit:
-          status:
+          commit: fed92289f3
+          status: visual
+          note: Missing texture (Vulkan too)
         forward_plus:
           commit:
           status:
@@ -2970,15 +2974,15 @@ demos:
     3d/ik:
       desktop-linuxbsd-wgpu:
         mobile:
-          commit:
-          status:
+          commit: fed92289f3
+          status: ok
         forward_plus:
-          commit:
-          status:
+          commit: fed92289f3
+          status: ok
       desktop-linuxbsd-dawn:
         mobile:
-          commit:
-          status:
+          commit: fed92289f3
+          status: ok
         forward_plus:
           commit:
           status:
@@ -3061,10 +3065,16 @@ demos:
           status:
     3d/kinematic_character:
       desktop-linuxbsd-wgpu:
+        mobile:
+          commit: fed92289f3
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: ok
       desktop-linuxbsd-dawn:
+        mobile:
+          commit: fed92289f3
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: ok
@@ -3144,10 +3154,16 @@ demos:
           status:
     3d/labels_and_texts:
       desktop-linuxbsd-wgpu:
+        mobile:
+          commit: fed92289f3
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: ok
       desktop-linuxbsd-dawn:
+        mobile:
+          commit: fed92289f3
+          status: performance
         forward_plus:
           commit: 1f8cdbca78
           status: ok
@@ -3411,10 +3427,16 @@ demos:
           status:
     3d/navigation:
       desktop-linuxbsd-wgpu:
+        mobile:
+          commit: fed92289f3
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: ok
       desktop-linuxbsd-dawn:
+        mobile:
+          commit: fed92289f3
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: ok
@@ -3494,10 +3516,16 @@ demos:
           status:
     3d/navigation_mesh_chunks:
       desktop-linuxbsd-wgpu:
+        mobile:
+          commit: fed92289f3
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: ok
       desktop-linuxbsd-dawn:
+        mobile:
+          commit: fed92289f3
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: ok
@@ -3945,10 +3973,16 @@ demos:
           status:
     3d/physics_tests:
       desktop-linuxbsd-wgpu:
+        mobile:
+          commit: fed92289f3
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: ok
       desktop-linuxbsd-dawn:
+        mobile:
+          commit: fed92289f3
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: ok
@@ -4304,10 +4338,16 @@ demos:
           status:
     3d/rigidbody_character:
       desktop-linuxbsd-wgpu:
+        mobile:
+          commit: fed92289f3
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: ok
       desktop-linuxbsd-dawn:
+        mobile:
+          commit: fed92289f3
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: ok
@@ -4571,10 +4611,18 @@ demos:
           status:
     3d/sprites:
       desktop-linuxbsd-wgpu:
+        mobile:
+          commit: fed92289f3
+          status: visual
+          note: Strange shadow (Vulkan too)
         forward_plus:
           commit: 1f8cdbca78
           status: ok
       desktop-linuxbsd-dawn:
+        mobile:
+          commit: fed92289f3
+          status: visual
+          note: Strange shadow (Vulkan too)
         forward_plus:
           commit: 1f8cdbca78
           status: ok
@@ -4654,10 +4702,16 @@ demos:
           status:
     3d/squash_the_creeps:
       desktop-linuxbsd-wgpu:
+        mobile:
+          commit: fed92289f3
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: ok
       desktop-linuxbsd-dawn:
+        mobile:
+          commit: fed92289f3
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: ok
@@ -5289,10 +5343,16 @@ demos:
           status:
     3d/waypoints:
       desktop-linuxbsd-wgpu:
+        mobile:
+          commit: fed92289f3
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: ok
       desktop-linuxbsd-dawn:
+        mobile:
+          commit: fed92289f3
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: ok
@@ -5556,17 +5616,23 @@ demos:
           status:
     compute/texture:
       desktop-linuxbsd-wgpu:
+        mobile:
+          commit: fed92289f3
+          status: visual
+          note: Missing texture
         forward_plus:
           commit: 1f8cdbca78
           status: visual
           note: Missing water texture
       desktop-linuxbsd-dawn:
         mobile:
-          commit:
-          status:
+          commit: fed92289f3
+          status: visual
+          note: Missing texture
         forward_plus:
-          commit:
-          status:
+          commit: fed92289f3
+          status: visual
+          note: Missing water texture
       desktop-windows-wgpu:
         mobile:
           commit:

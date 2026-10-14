@@ -2740,8 +2740,9 @@ demos:
           status: crash
       web-linuxbsd-chromium:
         mobile:
-          commit:
-          status:
+          commit: fed92289f3
+          status: visual
+          note: Missing texture
         forward_plus:
           commit:
           status:
@@ -3016,8 +3017,9 @@ demos:
           status: crash
       web-linuxbsd-chromium:
         mobile:
-          commit:
-          status:
+          commit: fed92289f3
+          status: visual
+          note: Detached limbs
         forward_plus:
           commit:
           status:
@@ -3107,6 +3109,9 @@ demos:
           commit: 1f8cdbca78
           status: crash
       web-linuxbsd-chromium:
+        mobile:
+          commit: fed92289f3
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: ok
@@ -3196,6 +3201,9 @@ demos:
           commit: 1f8cdbca78
           status: crash
       web-linuxbsd-chromium:
+        mobile:
+          commit: fed92289f3
+          status: crash
         forward_plus:
           commit: 1f8cdbca78
           status: ok
@@ -3469,6 +3477,9 @@ demos:
           commit: 1f8cdbca78
           status: crash
       web-linuxbsd-chromium:
+        mobile:
+          commit: fed92289f3
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: ok
@@ -3558,6 +3569,9 @@ demos:
           commit: 1f8cdbca78
           status: crash
       web-linuxbsd-chromium:
+        mobile:
+          commit: fed92289f3
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: ok
@@ -4015,6 +4029,9 @@ demos:
           commit: 1f8cdbca78
           status: crash
       web-linuxbsd-chromium:
+        mobile:
+          commit: fed92289f3
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: ok
@@ -4380,6 +4397,9 @@ demos:
           commit: 1f8cdbca78
           status: crash
       web-linuxbsd-chromium:
+        mobile:
+          commit: fed92289f3
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: ok
@@ -4406,8 +4426,8 @@ demos:
           status: crash
       web-macos-chromium:
         mobile:
-          commit:
-          status:
+          commit: fed92289f3
+          status: ok
         forward_plus:
           commit:
           status:
@@ -4655,6 +4675,9 @@ demos:
           commit: 1f8cdbca78
           status: crash
       web-linuxbsd-chromium:
+        mobile:
+          commit: fed92289f3
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: ok
@@ -4744,6 +4767,9 @@ demos:
           commit: 1f8cdbca78
           status: crash
       web-linuxbsd-chromium:
+        mobile:
+          commit: fed92289f3
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: ok
@@ -5385,6 +5411,10 @@ demos:
           commit: 1f8cdbca78
           status: crash
       web-linuxbsd-chromium:
+        mobile:
+          commit: fed92289f3
+          status: partial
+          note: The root document of this element is not valid for pointer lock
         forward_plus:
           commit: 1f8cdbca78
           status: ok

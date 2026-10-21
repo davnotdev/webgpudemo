@@ -6,15 +6,15 @@ demos:
     sponza:
       desktop-linuxbsd-wgpu:
         mobile:
-          commit:
-          status:
+          commit: 6ead867280
+          status: ok
         forward_plus:
           commit: 6ead867280
           status: ok
       desktop-linuxbsd-dawn:
         mobile:
-          commit:
-          status:
+          commit: 6ead867280
+          status: ok
         forward_plus:
           commit: 6ead867280
           status: ok

@@ -2650,8 +2650,9 @@ demos:
           status: crash
       web-linuxbsd-chromium:
         mobile:
-          commit:
-          status:
+          commit: 6ead867280
+          status: visual
+          note: missing textures
         forward_plus:
           commit:
           status:
@@ -3022,12 +3023,15 @@ demos:
           status: crash
       web-linuxbsd-chromium:
         mobile:
-          commit: fed92289f3
+          commit: 6ead867280
           status: visual
-          note: Detached limbs
+          note: 'detached head, "SHADER ERROR: Too many varyings used in shader (17 used, maximum
+  supported is 16)."'
         forward_plus:
-          commit:
-          status:
+          commit: 6ead867280
+          status: visual
+          note: 'detached head, "SHADER ERROR: Too many varyings used in shader (17 used, maximum
+  supported is 16)."'
       web-linuxbsd-firefox:
         mobile:
           commit: 1f8cdbca78
@@ -3299,11 +3303,11 @@ demos:
           status: crash
       web-linuxbsd-chromium:
         mobile:
-          commit:
-          status:
+          commit: 6ead867280
+          status: ok
         forward_plus:
-          commit:
-          status:
+          commit: 6ead867280
+          status: crash
       web-linuxbsd-firefox:
         mobile:
           commit: 1f8cdbca78
@@ -3394,8 +3398,8 @@ demos:
           status: crash
       web-linuxbsd-chromium:
         mobile:
-          commit:
-          status:
+          commit: 6ead867280
+          status: ok
         forward_plus:
           commit:
           status:
@@ -3762,11 +3766,11 @@ demos:
           status: crash
       web-linuxbsd-chromium:
         mobile:
-          commit:
-          status:
+          commit: 6ead867280
+          status: ok
         forward_plus:
-          commit:
-          status:
+          commit: 6ead867280
+          status: ok
       web-linuxbsd-firefox:
         mobile:
           commit: 1f8cdbca78
@@ -3857,11 +3861,13 @@ demos:
           status: crash
       web-linuxbsd-chromium:
         mobile:
-          commit:
-          status:
+          commit: 6ead867280
+          status: partial
+          note: OK but no GI
         forward_plus:
-          commit:
-          status:
+          commit: 6ead867280
+          status: partial
+          note: OK but no GI
       web-linuxbsd-firefox:
         mobile:
           commit: 1f8cdbca78
@@ -4135,11 +4141,13 @@ demos:
           status: crash
       web-linuxbsd-chromium:
         mobile:
-          commit:
-          status:
+          commit: 6ead867280
+          status: visual
+          note: missing skybox
         forward_plus:
-          commit:
-          status:
+          commit: 6ead867280
+          status: visual
+          note: missing skybox
       web-linuxbsd-firefox:
         mobile:
           commit: 1f8cdbca78
@@ -4227,11 +4235,11 @@ demos:
           status: crash
       web-linuxbsd-chromium:
         mobile:
-          commit:
-          status:
+          commit: 6ead867280
+          status: ok
         forward_plus:
-          commit:
-          status:
+          commit: 6ead867280
+          status: ok
       web-linuxbsd-firefox:
         mobile:
           commit: 1f8cdbca78
@@ -4968,8 +4976,8 @@ demos:
           status: crash
       web-linuxbsd-chromium:
         mobile:
-          commit:
-          status:
+          commit: 6ead867280
+          status: ok
         forward_plus:
           commit:
           status:
@@ -5246,11 +5254,12 @@ demos:
           status: crash
       web-linuxbsd-chromium:
         mobile:
-          commit:
-          status:
+          commit: 6ead867280
+          status: visual
+          note: 'Limits: "Too many varyings used in shader (17 used, maximum supported is 16)"'
         forward_plus:
-          commit:
-          status:
+          commit: 6ead867280
+          status: ok
       web-linuxbsd-firefox:
         mobile:
           commit: 1f8cdbca78
@@ -5342,11 +5351,13 @@ demos:
           status: crash
       web-linuxbsd-chromium:
         mobile:
-          commit:
-          status:
+          commit: 6ead867280
+          status: visual
+          note: blurry look and broken depth
         forward_plus:
-          commit:
-          status:
+          commit: 6ead867280
+          status: visual
+          note: blurry look and broken depth
       web-linuxbsd-firefox:
         mobile:
           commit: 1f8cdbca78

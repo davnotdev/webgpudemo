@@ -2618,8 +2618,8 @@ demos:
           status: visual
           note: Missing texture
         forward_plus:
-          commit:
-          status:
+          commit: 6ead867280
+          status: ok
       desktop-windows-wgpu:
         mobile:
           commit:
@@ -2712,8 +2712,8 @@ demos:
           status: visual
           note: Missing texture (Vulkan too)
         forward_plus:
-          commit:
-          status:
+          commit: 6ead867280
+          status: ok
       desktop-windows-wgpu:
         mobile:
           commit:
@@ -2990,8 +2990,8 @@ demos:
           commit: fed92289f3
           status: ok
         forward_plus:
-          commit:
-          status:
+          commit: 6ead867280
+          status: ok
       desktop-windows-wgpu:
         mobile:
           commit:

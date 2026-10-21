@@ -1,0 +1,31 @@
+diff --git a/scripts/settings_gui.gd b/scripts/settings_gui.gd
+index 6f18d31..c081d7d 100644
+--- a/scripts/settings_gui.gd
++++ b/scripts/settings_gui.gd
+@@ -54,7 +54,7 @@ var presets = [
+ 		"environment/glow_enabled": [false, "Disabled"],
+ 		"environment/ss_reflections_enabled": [false, "Disabled"],
+ 		"environment/ssao_enabled": [false, "Disabled"],
+-		"rendering/anti_aliasing/quality/msaa_3d": [Viewport.MSAA_2X, "2×"],
++		"rendering/anti_aliasing/quality/msaa_3d": [Viewport.MSAA_DISABLED, "2×"],
+ 	},
+ 
+ 	# High
+@@ -62,7 +62,7 @@ var presets = [
+ 		"environment/glow_enabled": [true, "Enabled"],
+ 		"environment/ss_reflections_enabled": [false, "Disabled"],
+ 		"environment/ssao_enabled": [true, "Medium-quality"],
+-		"rendering/anti_aliasing/quality/msaa_3d": [Viewport.MSAA_4X, "4×"],
++		"rendering/anti_aliasing/quality/msaa_3d": [Viewport.MSAA_DISABLED, "4×"],
+ 	},
+ 
+ 	# Ultra
+@@ -70,7 +70,7 @@ var presets = [
+ 		"environment/glow_enabled": [true, "Enabled"],
+ 		"environment/ss_reflections_enabled": [true, "Enabled"],
+ 		"environment/ssao_enabled": [true, "High-quality"],
+-		"rendering/anti_aliasing/quality/msaa_3d": [Viewport.MSAA_8X, "8×"],
++		"rendering/anti_aliasing/quality/msaa_3d": [Viewport.MSAA_DISABLED, "8×"],
+ 	},
+ ]
+ 

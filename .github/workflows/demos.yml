@@ -139,7 +139,7 @@ jobs:
       - uses: actions/cache@v4
         with:
           path: ${{ steps.checkout.outputs.imports }}
-          key: demo-imports-${{ fromJSON(inputs.commits).godot }}-${{ hashFiles('ci/source/demos/*.yml') }}-${{ inputs.shard-size }}-${{ matrix.shard.id }}
+          key: demo-imports-${{ fromJSON(inputs.commits).godot }}-${{ hashFiles('ci/source/demos/*.yml', 'ci/source/patches/**') }}-${{ inputs.shard-size }}-${{ matrix.shard.id }}
 
       - run: |
           editor=$(find editor -type f -name 'godot.linuxbsd.editor*' ! -name '*.debug' | head -n 1)

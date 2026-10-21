@@ -2,7 +2,8 @@
 
 set -e
 
-# Usage: export-demos.sh <project dir>...
+# Usage: export-demos.sh <demo>/<project dir>...
+# Each demo is a repository named after its `source/demos/*.yml` with patches applied.
 # BUILDTYPE=<debug|release>
 # TEMPLATE=<path to godot.web.template_*.wasm32.nothreads.zip>
 # GODOT_EDITOR=<path to the godot editor binary>
@@ -34,6 +35,10 @@ export TIMEOUT=${TIMEOUT:-30m}
 export RENDERING_METHOD="${RENDERING_METHOD:-mobile}"
 export BUILDTYPE
 : > "$LOG_DIR/failed"
+
+for demo in $(printf '%s\n' "$@" | cut -d/ -f1 | sort -u); do
+    DEMO_DIR="$demo" bash "$SCRIPTS/patch-demo-source.sh"
+done
 
 export_one() {
     local dir=$1

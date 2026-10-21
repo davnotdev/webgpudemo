@@ -2,6 +2,99 @@
 # Statuses: <ok|performance|visual|partial|crash>
 
 demos:
+  godot-sponza:
+    sponza:
+      desktop-linuxbsd-wgpu:
+        mobile:
+          commit:
+          status:
+        forward_plus:
+          commit: 6ead867280
+          status: ok
+      desktop-linuxbsd-dawn:
+        mobile:
+          commit:
+          status:
+        forward_plus:
+          commit: 6ead867280
+          status: ok
+      desktop-windows-wgpu:
+        mobile:
+          commit:
+          status:
+        forward_plus:
+          commit:
+          status:
+      desktop-windows-dawn:
+        mobile:
+          commit:
+          status:
+        forward_plus:
+          commit:
+          status:
+      desktop-macos-wgpu:
+        mobile:
+          commit: 6ead867280
+          status: crash
+        forward_plus:
+          commit: 6ead867280
+          status: crash
+      desktop-macos-dawn:
+        mobile:
+          commit: 6ead867280
+          status: crash
+        forward_plus:
+          commit: 6ead867280
+          status: crash
+      web-linuxbsd-chromium:
+        mobile:
+          commit:
+          status:
+        forward_plus:
+          commit:
+          status:
+      web-linuxbsd-firefox:
+        mobile:
+          commit: 6ead867280
+          status: crash
+        forward_plus:
+          commit: 6ead867280
+          status: crash
+      web-windows-chromium:
+        mobile:
+          commit:
+          status:
+        forward_plus:
+          commit:
+          status:
+      web-windows-firefox:
+        mobile:
+          commit: 6ead867280
+          status: crash
+        forward_plus:
+          commit: 6ead867280
+          status: crash
+      web-macos-chromium:
+        mobile:
+          commit:
+          status:
+        forward_plus:
+          commit:
+          status:
+      web-macos-firefox:
+        mobile:
+          commit: 6ead867280
+          status: crash
+        forward_plus:
+          commit: 6ead867280
+          status: crash
+      web-macos-safari:
+        mobile:
+          commit:
+          status:
+        forward_plus:
+          commit:
+          status:
   godot-demo-projects:
     2d/bullet_shower:
       desktop-linuxbsd-wgpu:

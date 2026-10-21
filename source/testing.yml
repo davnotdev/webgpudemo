@@ -2510,18 +2510,22 @@ demos:
     3d/antialiasing:
       desktop-linuxbsd-wgpu:
         mobile:
-          commit:
-          status:
+          commit: 6ead867280
+          status: partial
+          note: MSAA WIP
         forward_plus:
-          commit:
-          status:
+          commit: 6ead867280
+          status: partial
+          note: MSAA WIP
       desktop-linuxbsd-dawn:
         mobile:
-          commit:
-          status:
+          commit: 6ead867280
+          status: crash
+          note: WIP
         forward_plus:
-          commit:
-          status:
+          commit: 6ead867280
+          status: crash
+          note: WIP
       desktop-windows-wgpu:
         mobile:
           commit:
@@ -2890,8 +2894,9 @@ demos:
           status:
       desktop-linuxbsd-dawn:
         mobile:
-          commit:
-          status:
+          commit: 6ead867280
+          status: crash
+          note: WIP
         forward_plus:
           commit:
           status:
@@ -3252,18 +3257,18 @@ demos:
     3d/lights_and_shadows:
       desktop-linuxbsd-wgpu:
         mobile:
-          commit:
-          status:
+          commit: 6ead867280
+          status: ok
         forward_plus:
-          commit:
-          status:
+          commit: 6ead867280
+          status: ok
       desktop-linuxbsd-dawn:
         mobile:
-          commit:
-          status:
+          commit: 6ead867280
+          status: ok
         forward_plus:
-          commit:
-          status:
+          commit: 6ead867280
+          status: ok
       desktop-windows-wgpu:
         mobile:
           commit:
@@ -3344,18 +3349,21 @@ demos:
     3d/material_testers:
       desktop-linuxbsd-wgpu:
         mobile:
-          commit:
-          status:
+          commit: 6ead867280
+          status: ok
         forward_plus:
-          commit:
-          status:
+          commit: 6ead867280
+          status: performance
+          note: startup too slow
       desktop-linuxbsd-dawn:
         mobile:
-          commit:
-          status:
+          commit: 6ead867280
+          status: performance
+          note: startup hang
         forward_plus:
-          commit:
-          status:
+          commit: 6ead867280
+          status: performance
+          note: startup too slow
       desktop-windows-wgpu:
         mobile:
           commit:
@@ -3712,18 +3720,18 @@ demos:
     3d/particles:
       desktop-linuxbsd-wgpu:
         mobile:
-          commit:
-          status:
+          commit: 6ead867280
+          status: ok
         forward_plus:
-          commit:
-          status:
+          commit: 6ead867280
+          status: ok
       desktop-linuxbsd-dawn:
         mobile:
-          commit:
-          status:
+          commit: 6ead867280
+          status: ok
         forward_plus:
-          commit:
-          status:
+          commit: 6ead867280
+          status: ok
       desktop-windows-wgpu:
         mobile:
           commit:
@@ -3804,18 +3812,21 @@ demos:
     3d/physical_light_camera_units:
       desktop-linuxbsd-wgpu:
         mobile:
-          commit:
-          status:
+          commit: 6ead867280
+          status: partial
+          note: OK but no GI
         forward_plus:
-          commit:
-          status:
+          commit: 6ead867280
+          status: partial
+          note: OK but no GI
       desktop-linuxbsd-dawn:
         mobile:
-          commit:
-          status:
+          commit: 6ead867280
+          status: ok
         forward_plus:
-          commit:
-          status:
+          commit: 6ead867280
+          status: partial
+          note: OK but no GI
       desktop-windows-wgpu:
         mobile:
           commit:
@@ -4080,18 +4091,20 @@ demos:
     3d/platformer:
       desktop-linuxbsd-wgpu:
         mobile:
-          commit:
-          status:
+          commit: 6ead867280
+          status: ok
         forward_plus:
-          commit:
-          status:
+          commit: 6ead867280
+          status: ok
       desktop-linuxbsd-dawn:
         mobile:
-          commit:
-          status:
+          commit: 6ead867280
+          status: performance
+          note: startup hang, slow buffer GC
         forward_plus:
-          commit:
-          status:
+          commit: 6ead867280
+          status: performance
+          note: startup hang, slow buffer GC
       desktop-windows-wgpu:
         mobile:
           commit:
@@ -4172,18 +4185,18 @@ demos:
     3d/procedural_materials:
       desktop-linuxbsd-wgpu:
         mobile:
-          commit:
-          status:
+          commit: 6ead867280
+          status: ok
         forward_plus:
-          commit:
-          status:
+          commit: 6ead867280
+          status: ok
       desktop-linuxbsd-dawn:
         mobile:
-          commit:
-          status:
+          commit: 6ead867280
+          status: ok
         forward_plus:
-          commit:
-          status:
+          commit: 6ead867280
+          status: ok
       desktop-windows-wgpu:
         mobile:
           commit:
@@ -4910,18 +4923,21 @@ demos:
     3d/truck_town:
       desktop-linuxbsd-wgpu:
         mobile:
-          commit:
-          status:
+          commit: 6ead867280
+          status: ok
         forward_plus:
-          commit:
-          status:
+          commit: 6ead867280
+          status: performance
+          note: OK
       desktop-linuxbsd-dawn:
         mobile:
-          commit:
-          status:
+          commit: 6ead867280
+          status: performance
+          note: low fps
         forward_plus:
-          commit:
-          status:
+          commit: 6ead867280
+          status: performance
+          note: low fps
       desktop-windows-wgpu:
         mobile:
           commit:
@@ -5186,18 +5202,20 @@ demos:
     3d/volumetric_fog:
       desktop-linuxbsd-wgpu:
         mobile:
-          commit:
-          status:
+          commit: 6ead867280
+          status: visual
+          note: 'Limits: "Too many varyings used in shader (17 used, maximum supported is 16)"'
         forward_plus:
-          commit:
-          status:
+          commit: 6ead867280
+          status: ok
       desktop-linuxbsd-dawn:
         mobile:
-          commit:
-          status:
+          commit: 6ead867280
+          status: visual
+          note: 'Limits: "Too many varyings used in shader (17 used, maximum supported is 16)"'
         forward_plus:
-          commit:
-          status:
+          commit: 6ead867280
+          status: ok
       desktop-windows-wgpu:
         mobile:
           commit:
@@ -5278,18 +5296,22 @@ demos:
     3d/voxel:
       desktop-linuxbsd-wgpu:
         mobile:
-          commit:
-          status:
+          commit: 6ead867280
+          status: visual
+          note: blurry look and broken depth
         forward_plus:
-          commit:
-          status:
+          commit: 6ead867280
+          status: visual
+          note: blurry look and broken depth
       desktop-linuxbsd-dawn:
         mobile:
-          commit:
-          status:
+          commit: 6ead867280
+          status: visual
+          note: blurry look and broken depth
         forward_plus:
-          commit:
-          status:
+          commit: 6ead867280
+          status: visual
+          note: blurry look and broken depth
       desktop-windows-wgpu:
         mobile:
           commit:

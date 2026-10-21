@@ -6,17 +6,17 @@ demos:
     sponza:
       desktop-linuxbsd-wgpu:
         mobile:
-          commit: 6ead867280
+          commit: 3338f1b8b9
           status: ok
         forward_plus:
-          commit: 6ead867280
+          commit: 3338f1b8b9
           status: ok
       desktop-linuxbsd-dawn:
         mobile:
-          commit: 6ead867280
+          commit: 3338f1b8b9
           status: ok
         forward_plus:
-          commit: 6ead867280
+          commit: 3338f1b8b9
           status: ok
       desktop-windows-wgpu:
         mobile:
@@ -34,17 +34,17 @@ demos:
           status:
       desktop-macos-wgpu:
         mobile:
-          commit: 6ead867280
+          commit: 3338f1b8b9
           status: crash
         forward_plus:
-          commit: 6ead867280
+          commit: 3338f1b8b9
           status: crash
       desktop-macos-dawn:
         mobile:
-          commit: 6ead867280
+          commit: 3338f1b8b9
           status: crash
         forward_plus:
-          commit: 6ead867280
+          commit: 3338f1b8b9
           status: crash
       web-linuxbsd-chromium:
         mobile:
@@ -55,10 +55,10 @@ demos:
           status:
       web-linuxbsd-firefox:
         mobile:
-          commit: 6ead867280
+          commit: 3338f1b8b9
           status: crash
         forward_plus:
-          commit: 6ead867280
+          commit: 3338f1b8b9
           status: crash
       web-windows-chromium:
         mobile:
@@ -69,10 +69,10 @@ demos:
           status:
       web-windows-firefox:
         mobile:
-          commit: 6ead867280
+          commit: 3338f1b8b9
           status: crash
         forward_plus:
-          commit: 6ead867280
+          commit: 3338f1b8b9
           status: crash
       web-macos-chromium:
         mobile:
@@ -83,10 +83,10 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 6ead867280
+          commit: 3338f1b8b9
           status: crash
         forward_plus:
-          commit: 6ead867280
+          commit: 3338f1b8b9
           status: crash
       web-macos-safari:
         mobile:

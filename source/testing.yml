@@ -52,11 +52,11 @@ demos:
           status: crash
       web-linuxbsd-chromium:
         mobile:
-          commit:
-          status:
+          commit: 3338f1b8b9
+          status: ok
         forward_plus:
-          commit:
-          status:
+          commit: 3338f1b8b9
+          status: ok
       web-linuxbsd-firefox:
         mobile:
           commit: 3338f1b8b9

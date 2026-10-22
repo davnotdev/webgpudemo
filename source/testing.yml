@@ -20,18 +20,22 @@ demos:
           status: ok
       desktop-windows-wgpu:
         mobile:
-          commit:
-          status:
+          commit: 3338f1b8b9
+          status: crash
+          note: Can run under wine but fails on native because of dxc???
         forward_plus:
-          commit:
-          status:
+          commit: 3338f1b8b9
+          status: crash
+          note: Can run under wine but fails on native because of dxc???
       desktop-windows-dawn:
         mobile:
-          commit:
-          status:
+          commit: 3338f1b8b9
+          status: crash
+          note: Can run under wine but fails on native because of dxc???
         forward_plus:
-          commit:
-          status:
+          commit: 3338f1b8b9
+          status: crash
+          note: Can run under wine but fails on native because of dxc???
       desktop-macos-wgpu:
         mobile:
           commit: 3338f1b8b9
@@ -113,18 +117,22 @@ demos:
           status: ok
       desktop-windows-wgpu:
         mobile:
-          commit:
-          status:
+          commit: 3338f1b8b9
+          status: crash
+          note: Can run under wine but fails on native because of dxc???
         forward_plus:
-          commit:
-          status:
+          commit: 3338f1b8b9
+          status: crash
+          note: Can run under wine but fails on native because of dxc???
       desktop-windows-dawn:
         mobile:
-          commit:
-          status:
+          commit: 3338f1b8b9
+          status: crash
+          note: Can run under wine but fails on native because of dxc???
         forward_plus:
-          commit:
-          status:
+          commit: 3338f1b8b9
+          status: crash
+          note: Can run under wine but fails on native because of dxc???
       desktop-macos-wgpu:
         mobile:
           commit: 1f8cdbca78
@@ -2747,8 +2755,8 @@ demos:
           status: visual
           note: missing textures
         forward_plus:
-          commit:
-          status:
+          commit: 6ead867280
+          status: ok
       web-linuxbsd-firefox:
         mobile:
           commit: 1f8cdbca78
@@ -3725,18 +3733,18 @@ demos:
     3d/occlusion_culling_mesh_lod:
       desktop-linuxbsd-wgpu:
         mobile:
-          commit:
-          status:
+          commit: a194850754
+          status: ok
         forward_plus:
-          commit:
-          status:
+          commit: a194850754
+          status: ok
       desktop-linuxbsd-dawn:
         mobile:
-          commit:
-          status:
+          commit: a194850754
+          status: ok
         forward_plus:
-          commit:
-          status:
+          commit: a194850754
+          status: ok
       desktop-windows-wgpu:
         mobile:
           commit:
@@ -3767,11 +3775,13 @@ demos:
           status: crash
       web-linuxbsd-chromium:
         mobile:
-          commit:
-          status:
+          commit: 6ead867280
+          status: visual
+          note: wireframe and overdraw not working
         forward_plus:
-          commit:
-          status:
+          commit: 6ead867280
+          status: visual
+          note: wireframe and overdraw not working
       web-linuxbsd-firefox:
         mobile:
           commit: 1f8cdbca78
@@ -5072,8 +5082,8 @@ demos:
           commit: 6ead867280
           status: ok
         forward_plus:
-          commit:
-          status:
+          commit: 6ead867280
+          status: ok
       web-linuxbsd-firefox:
         mobile:
           commit: 1f8cdbca78

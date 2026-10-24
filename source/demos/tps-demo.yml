@@ -1,0 +1,5 @@
+url: https://github.com/godotengine/tps-demo
+# The latest commit as of 10/24/2026
+commit: a82f15448e9b015440d3bbdf5e10801b260c4e9f
+roots:
+  - .

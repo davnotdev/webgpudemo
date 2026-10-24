@@ -1,0 +1,65 @@
+diff --git a/level/level.gd b/level/level.gd
+index 83d5c83..61a8428 100644
+--- a/level/level.gd
++++ b/level/level.gd
+@@ -17,12 +17,7 @@ var lightmap_gi: LightmapGI = null
+ func _ready() -> void:
+ 	Settings.apply_graphics_settings(get_window(), world_environment.environment, self)
+ 
+-	if Settings.config_file.get_value("rendering", "gi_type") == Settings.GIType.SDFGI:
+-		setup_sdfgi()
+-	elif Settings.config_file.get_value("rendering", "gi_type") == Settings.GIType.VOXEL_GI:
+-		setup_voxelgi()
+-	else:
+-		setup_lightmapgi()
++	disable_gi()
+ 
+ 	if multiplayer.is_server():
+ 		# Server will spawn the red robots
+@@ -42,6 +37,15 @@ func _ready() -> void:
+ 		multiplayer.peer_disconnected.connect(del_player)
+ 
+ 
++func disable_gi() -> void:
++	world_environment.environment.sdfgi_enabled = false
++	$VoxelGI.hide()
++	$ReflectionProbes.hide()
++	if lightmap_gi != null:
++		lightmap_gi.queue_free()
++		lightmap_gi = null
++
++
+ func setup_sdfgi() -> void:
+ 	world_environment.environment.sdfgi_enabled = true
+ 	$VoxelGI.hide()
+diff --git a/menu/settings.gd b/menu/settings.gd
+index 0c4dac6..69816ed 100644
+--- a/menu/settings.gd
++++ b/menu/settings.gd
+@@ -85,23 +85,9 @@ func apply_graphics_settings(window: Window, environment: Environment, scene_roo
+ 		# as this would negatively affect the level's performance.
+ 		scene_root.propagate_call("set", ["shadow_enabled", false])
+ 
+-	if Settings.config_file.get_value("rendering", "ssao_quality") == -1:
+-		environment.ssao_enabled = false
+-	if Settings.config_file.get_value("rendering", "ssao_quality") == RenderingServer.ENV_SSAO_QUALITY_MEDIUM:
+-		environment.ssao_enabled = true
+-		RenderingServer.environment_set_ssao_quality(RenderingServer.ENV_SSAO_QUALITY_HIGH, false, 0.5, 2, 50, 300)
+-	else:
+-		environment.ssao_enabled = true
+-		RenderingServer.environment_set_ssao_quality(RenderingServer.ENV_SSAO_QUALITY_MEDIUM, true, 0.5, 2, 50, 300)
+-
+-	if Settings.config_file.get_value("rendering", "ssil_quality") == -1:
+-		environment.ssil_enabled = false
+-	elif Settings.config_file.get_value("rendering", "ssil_quality") == RenderingServer.ENV_SSIL_QUALITY_MEDIUM:
+-		environment.ssil_enabled = true
+-		RenderingServer.environment_set_ssil_quality(RenderingServer.ENV_SSIL_QUALITY_MEDIUM, false, 0.5, 2, 50, 300)
+-	else:
+-		environment.ssil_enabled = true
+-		RenderingServer.environment_set_ssil_quality(RenderingServer.ENV_SSIL_QUALITY_HIGH, true, 0.5, 2, 50, 300)
++	environment.sdfgi_enabled = false
++	environment.ssao_enabled = false
++	environment.ssil_enabled = false
+ 
+ 	environment.glow_enabled = Settings.config_file.get_value("rendering", "bloom")
+ 	environment.volumetric_fog_enabled = Settings.config_file.get_value("rendering", "volumetric_fog")

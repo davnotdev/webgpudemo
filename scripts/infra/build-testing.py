@@ -11,7 +11,7 @@ import yaml
 ROOT = Path(__file__).resolve().parent.parent.parent
 
 RENDERERS = {"mobile": ("M", "Mobile"), "forward_plus": ("F", "Forward+")}
-MARKS = {"ok": "✅", "performance": "⏱️", "visual": "👁️", "partial": "⚠️", "crash": "❌"}
+MARKS = {"ok": "✅", "performance": "⏱️", "visual": "👁️", "partial": "⚠️", "crash": "❌", "wip": "🚧"}
 UNTESTED = "❔"
 PLATFORMS = ["linuxbsd", "windows", "macos"]
 TARGETS = [f"desktop-{platform}-{backend}" for platform in PLATFORMS for backend in ["wgpu", "dawn"]] + [
@@ -63,7 +63,7 @@ def render():
 
     sections = [
         "M is Mobile, F is Forward+. "
-        f"✅ OK, ⏱️ Performance, 👁️ Visual, ⚠️ Partial, ❌ Crash, {UNTESTED} Needs testing."
+        f"✅ OK, ⏱️ Performance, 👁️ Visual, ⚠️ Partial, ❌ Crash, 🚧 WIP, {UNTESTED} Needs testing."
     ]
     for repo, projects in demos.items():
         config = ROOT / "source/demos" / f"{repo}.yml"

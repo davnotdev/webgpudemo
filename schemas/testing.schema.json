@@ -42,7 +42,7 @@
           "type": ["string", "null"],
           "pattern": "^[0-9a-f]{7,40}$"
         },
-        "status": { "enum": ["ok", "performance", "visual", "partial", "crash", null] },
+        "status": { "enum": ["ok", "performance", "visual", "partial", "crash", "wip", null] },
         "note": { "type": ["string", "null"] }
       },
       "if": { "properties": { "status": { "type": "string" } } },

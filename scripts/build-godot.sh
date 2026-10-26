@@ -106,3 +106,14 @@ scons --max-drift=1 \
     $SCONS_PLATFORM_FLAGS \
     "$@"
 
+if [ "$PLATFORM" = windows ] && [ "$BACKEND" = dawn-desktop ]; then
+    cp thirdparty/dawn/bin/*.dll bin/
+elif [ "$PLATFORM" = windows ]; then
+    DXC_DIRS=("/c/Program Files (x86)/Windows Kits/10/bin/"*/x64)
+    DXC_DIR=$(printf '%s\n' "${DXC_DIRS[@]}" | sort -V | tail -n 1)
+    if [ ! -f "$DXC_DIR/dxcompiler.dll" ] || [ ! -f "$DXC_DIR/dxil.dll" ]; then
+        echo "Error: no dxcompiler.dll and dxil.dll in the Windows SDK"
+        exit 1
+    fi
+    cp "$DXC_DIR/dxcompiler.dll" "$DXC_DIR/dxil.dll" bin/
+fi

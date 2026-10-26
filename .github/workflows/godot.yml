@@ -107,7 +107,9 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: godot-${{ inputs.platform }}-${{ matrix.buildtype }}-${{ env.VARIANT }}
-          path: godot/bin/${{ inputs.platform == 'windows' && '*.exe' || inputs.platform == 'web' && '*.zip' || 'godot.linuxbsd.*' }}
+          path: |
+            godot/bin/${{ inputs.platform == 'windows' && '*.exe' || inputs.platform == 'web' && '*.zip' || 'godot.linuxbsd.*' }}
+            ${{ inputs.platform == 'windows' && 'godot/bin/*.dll' || '' }}
           if-no-files-found: error
 
       - if: inputs.platform == 'windows'

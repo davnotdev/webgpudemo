@@ -29,13 +29,11 @@ demos:
           note: Can run under wine but fails on native because of dxc???
       desktop-windows-dawn:
         mobile:
-          commit: 3338f1b8b9
+          commit: 19b5846dea
           status: crash
-          note: Can run under wine but fails on native because of dxc???
         forward_plus:
-          commit: 3338f1b8b9
+          commit: 19b5846dea
           status: crash
-          note: Can run under wine but fails on native because of dxc???
       desktop-macos-wgpu:
         mobile:
           commit: 3338f1b8b9
@@ -170,11 +168,11 @@ demos:
           status: wip
       web-windows-chromium:
         mobile:
-          commit:
-          status:
+          commit: 19b5846dea
+          status: crash
         forward_plus:
-          commit:
-          status:
+          commit: 19b5846dea
+          status: crash
       web-windows-firefox:
         mobile:
           commit: 8d57057abc
@@ -221,22 +219,18 @@ demos:
           status: ok
       desktop-windows-wgpu:
         mobile:
-          commit: 3338f1b8b9
-          status: crash
-          note: Can run under wine but fails on native because of dxc???
+          commit: 19b5846dea
+          status: ok
         forward_plus:
-          commit: 3338f1b8b9
-          status: crash
-          note: Can run under wine but fails on native because of dxc???
+          commit: 19b5846dea
+          status: ok
       desktop-windows-dawn:
         mobile:
-          commit: 3338f1b8b9
-          status: crash
-          note: Can run under wine but fails on native because of dxc???
+          commit: 19b5846dea
+          status: ok
         forward_plus:
-          commit: 3338f1b8b9
-          status: crash
-          note: Can run under wine but fails on native because of dxc???
+          commit: 19b5846dea
+          status: ok
       desktop-macos-wgpu:
         mobile:
           commit: 1f8cdbca78
@@ -4909,18 +4903,20 @@ demos:
           status: ok
       desktop-windows-wgpu:
         mobile:
-          commit:
-          status:
+          commit: 19b5846dea
+          status: visual
+          note: broken perspective
         forward_plus:
-          commit:
-          status:
+          commit: 19b5846dea
+          status: visual
+          note: broken perspective
       desktop-windows-dawn:
         mobile:
-          commit:
-          status:
+          commit: 19b5846dea
+          status: crash
         forward_plus:
-          commit:
-          status:
+          commit: 19b5846dea
+          status: crash
       desktop-macos-wgpu:
         mobile:
           commit: 1f8cdbca78

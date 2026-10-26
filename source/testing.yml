@@ -74,8 +74,8 @@ demos:
           note: requires Chrome 157+
       web-windows-firefox:
         mobile:
-          commit: 3338f1b8b9
-          status: wip
+          commit: 8d57057abc
+          status: ok
         forward_plus:
           commit: 3338f1b8b9
           status: wip
@@ -88,8 +88,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 3338f1b8b9
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 3338f1b8b9
           status: wip
@@ -122,29 +122,33 @@ demos:
           note: low fps
       desktop-windows-wgpu:
         mobile:
-          commit:
-          status:
+          commit: 8d57057abc
+          status: crash
+          note: Can run under wine but fails on native because of dxc???
         forward_plus:
-          commit:
-          status:
+          commit: 8d57057abc
+          status: crash
+          note: Can run under wine but fails on native because of dxc???
       desktop-windows-dawn:
         mobile:
-          commit:
-          status:
+          commit: 8d57057abc
+          status: crash
+          note: Can run under wine but fails on native because of dxc???
         forward_plus:
-          commit:
-          status:
+          commit: 8d57057abc
+          status: crash
+          note: Can run under wine but fails on native because of dxc???
       desktop-macos-wgpu:
         mobile:
-          commit:
-          status:
+          commit: 8d57057abc
+          status: wip
         forward_plus:
           commit: 3e44ae461e
           status: wip
       desktop-macos-dawn:
         mobile:
-          commit:
-          status:
+          commit: 8d57057abc
+          status: wip
         forward_plus:
           commit: 3e44ae461e
           status: wip
@@ -173,8 +177,8 @@ demos:
           status:
       web-windows-firefox:
         mobile:
-          commit:
-          status:
+          commit: 8d57057abc
+          status: performance
         forward_plus:
           commit: 3e44ae461e
           status: wip
@@ -271,8 +275,8 @@ demos:
           status: ok
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -285,8 +289,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -363,8 +367,8 @@ demos:
           status:
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -377,8 +381,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -455,8 +459,8 @@ demos:
           status: ok
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -469,8 +473,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -547,8 +551,8 @@ demos:
           status:
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -561,8 +565,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -639,8 +643,8 @@ demos:
           status: ok
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -653,8 +657,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -731,8 +735,8 @@ demos:
           status: ok
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -745,8 +749,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -823,8 +827,8 @@ demos:
           status: ok
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -837,8 +841,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -915,8 +919,8 @@ demos:
           status: ok
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -929,8 +933,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -1007,8 +1011,8 @@ demos:
           status: ok
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -1021,8 +1025,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -1100,8 +1104,9 @@ demos:
           status: ok
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: visual
+          note: missing / miscolored texture, possibly swizzle related?
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -1114,8 +1119,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -1192,8 +1197,8 @@ demos:
           status: ok
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -1206,8 +1211,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -1284,8 +1289,8 @@ demos:
           status: ok
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -1298,8 +1303,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -1376,8 +1381,8 @@ demos:
           status: ok
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -1390,8 +1395,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -1468,8 +1473,8 @@ demos:
           status: ok
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -1482,8 +1487,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -1560,8 +1565,8 @@ demos:
           status: ok
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -1574,8 +1579,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -1652,8 +1657,8 @@ demos:
           status: ok
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -1666,8 +1671,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -1752,8 +1757,9 @@ demos:
           note:
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: crash
+          note: integer divide by zero
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -1767,8 +1773,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -1845,8 +1851,8 @@ demos:
           status: ok
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -1859,8 +1865,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -1937,8 +1943,8 @@ demos:
           status: ok
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -1951,8 +1957,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -2029,8 +2035,8 @@ demos:
           status: ok
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -2043,8 +2049,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -2129,8 +2135,8 @@ demos:
           note:
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: partial
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -2144,8 +2150,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -2222,8 +2228,8 @@ demos:
           status: ok
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -2236,8 +2242,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -2314,8 +2320,8 @@ demos:
           status: ok
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -2328,8 +2334,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -2406,8 +2412,8 @@ demos:
           status: ok
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -2420,8 +2426,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -2498,8 +2504,8 @@ demos:
           status: ok
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -2512,8 +2518,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -2590,8 +2596,8 @@ demos:
           status: ok
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -2604,8 +2610,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -2682,8 +2688,8 @@ demos:
           status: ok
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -2696,8 +2702,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -2779,8 +2785,9 @@ demos:
           status:
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: partial
+          note: no MSAA
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -2793,8 +2800,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -2877,8 +2884,9 @@ demos:
           note: requires Chrome 157+
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: visual
+          note: missing textures
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -2891,8 +2899,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -2975,8 +2983,9 @@ demos:
           note: requires Chrome 157+
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: visual
+          note: Missing texture
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -2989,8 +2998,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -3068,8 +3077,9 @@ demos:
           status:
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: visual
+          note: no GI
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -3082,8 +3092,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -3161,8 +3171,8 @@ demos:
           status:
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -3175,8 +3185,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -3257,8 +3267,9 @@ demos:
           status:
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: visual
+          note: severed head
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -3271,8 +3282,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -3350,8 +3361,8 @@ demos:
           note: requires Chrome 157+
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -3364,8 +3375,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -3444,8 +3455,9 @@ demos:
           note: requires Chrome 157+
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: crash
+          note: tab crash
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -3458,8 +3470,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -3537,8 +3549,8 @@ demos:
           note: requires Chrome 157+
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -3551,8 +3563,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -3632,8 +3644,8 @@ demos:
           status:
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -3646,8 +3658,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -3725,8 +3737,8 @@ demos:
           note: requires Chrome 157+
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -3739,8 +3751,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -3818,8 +3830,8 @@ demos:
           note: requires Chrome 157+
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -3832,8 +3844,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -3914,8 +3926,9 @@ demos:
           note: wireframe and overdraw not working, requires Chrome 157+
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: visual
+          note: wireframe and overdraw not working
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -3928,8 +3941,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -4006,8 +4019,8 @@ demos:
           status:
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -4020,8 +4033,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -4106,8 +4119,9 @@ demos:
           note: OK but no GI, requires Chrome 157+
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: partial
+          note: OK but no GI
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -4120,8 +4134,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -4198,8 +4212,8 @@ demos:
           status:
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -4212,8 +4226,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -4290,8 +4304,8 @@ demos:
           status:
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -4304,8 +4318,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -4388,8 +4402,9 @@ demos:
           note: requires Chrome 157+
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: visual
+          note: missing skybox
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -4402,8 +4417,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -4480,8 +4495,8 @@ demos:
           status:
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -4494,8 +4509,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -4572,8 +4587,8 @@ demos:
           status:
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -4586,8 +4601,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -4665,8 +4680,8 @@ demos:
           note: requires Chrome 157+
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -4679,8 +4694,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -4757,8 +4772,8 @@ demos:
           status:
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -4771,8 +4786,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -4849,8 +4864,8 @@ demos:
           status:
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -4863,8 +4878,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -4944,8 +4959,8 @@ demos:
           note: requires Chrome 157+
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -4958,8 +4973,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -5037,8 +5052,8 @@ demos:
           note: requires Chrome 157+
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -5051,8 +5066,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -5129,8 +5144,8 @@ demos:
           status:
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -5143,8 +5158,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -5224,8 +5239,8 @@ demos:
           note: requires Chrome 157+
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -5238,8 +5253,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -5316,8 +5331,8 @@ demos:
           status:
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -5330,8 +5345,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -5408,8 +5423,8 @@ demos:
           status:
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -5422,8 +5437,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -5505,8 +5520,8 @@ demos:
           note: requires Chrome 157+
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -5519,8 +5534,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -5606,8 +5621,9 @@ demos:
           note: blurry look and broken depth, requires Chrome 157+
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: visual
+          note: blurry look and broken depth
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -5620,8 +5636,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -5685,9 +5701,8 @@ demos:
           status: ok
       web-linuxbsd-firefox:
         mobile:
-          commit: 3e44ae461e
-          status: partial
-          note: The root document of this element is not valid for pointer lock
+          commit: 8d57057abc
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -5701,8 +5716,8 @@ demos:
           note: requires Chrome 157+
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit: 8d57057abc
+          status: ok
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -5715,8 +5730,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -5793,8 +5808,8 @@ demos:
           status:
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -5807,8 +5822,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -5885,8 +5900,8 @@ demos:
           status:
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -5899,8 +5914,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -5978,8 +5993,8 @@ demos:
           status:
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -5992,8 +6007,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -6070,8 +6085,8 @@ demos:
           status:
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -6084,8 +6099,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -6162,8 +6177,8 @@ demos:
           status:
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -6176,8 +6191,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -6254,8 +6269,8 @@ demos:
           status:
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -6268,8 +6283,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -6346,8 +6361,8 @@ demos:
           status: ok
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -6360,8 +6375,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -6438,8 +6453,8 @@ demos:
           status: ok
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -6452,8 +6467,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -6530,8 +6545,8 @@ demos:
           status:
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -6544,8 +6559,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -6622,8 +6637,8 @@ demos:
           status:
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -6636,8 +6651,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -6714,8 +6729,8 @@ demos:
           status:
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -6728,8 +6743,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -6806,8 +6821,8 @@ demos:
           status:
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -6820,8 +6835,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -6898,8 +6913,8 @@ demos:
           status:
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -6912,8 +6927,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -6990,8 +7005,8 @@ demos:
           status:
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -7004,8 +7019,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -7082,8 +7097,8 @@ demos:
           status:
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -7096,8 +7111,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -7174,8 +7189,8 @@ demos:
           status:
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -7188,8 +7203,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -7266,8 +7281,8 @@ demos:
           status:
       web-windows-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
@@ -7280,8 +7295,8 @@ demos:
           status:
       web-macos-firefox:
         mobile:
-          commit: 1f8cdbca78
-          status: wip
+          commit:
+          status:
         forward_plus:
           commit: 1f8cdbca78
           status: wip
